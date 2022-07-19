@@ -11,6 +11,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - [What I Did](#what-i-did)
   - [What I'll Do](#what-ill-do)
   - [Built with](#built-with)
+  - [Planing To](planing-to)
 - [Author](#author)
 
 ## Overview
@@ -54,12 +55,20 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 - Semantic HTML5 markup
 - CSS custom properties
+- SASS
 - Flexbox
 - Grid
 - CSS Media Queries
 - Normalize
 - Font Awesome
 - Visual Studio Code
+
+### Planing To
+
+- Upgrade it by Adding Some Features Using JavaScript
+- Upgrade it by Using React
+- Upgrade it by Adding Dark Mode
+- Upgrade it by Adding Another Language
 
 ## Author
 
