@@ -11,7 +11,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - [What I Did](#what-i-did)
   - [What I'll Do](#what-ill-do)
   - [Built with](#built-with)
-  - [Planing To](planing-to)
+  - [Planing To](#planing-to)
 - [Author](#author)
 
 ## Overview
