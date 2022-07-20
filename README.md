@@ -8,8 +8,10 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [What I Did](#what-i-did)
-  - [What I'll Do](#what-ill-do)
+  - [Updates](#updates)
+    - [What I Did](#what-i-did)
+    - [Changes](#changes)
+    - [What I'll Do](#what-ill-do)
   - [Built with](#built-with)
   - [Planing To](#planing-to)
 - [Author](#author)
@@ -23,52 +25,73 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 ### Links
 
-- Live Site URL: [Live site URL here](https://mohamed-waled.github.io/webSite/)
+- Live Site URL: [Live site URL here](https://mohamed-waled.github.io/webSite/).
 
 ## My process
 
-### What I Did
+### Updates
 
-- Build The Header & The First Three Sections (3 / 15)
-  - Header "Other Links Menu isn't Build Yet"
-  - Landing
-  - Articles
-  - Gallery
+#### What I Did
 
-### What I'll Do
+- Build The Header & The First Three Sections (7 / 16):
+  - Header "Other Links Menu isn't Build Yet".
+  - Landing.
+  - Articles.
+  - Gallery.
+  - Features.
+  - Testimonials.
+  - Team Members.
 
-- Build The Remaining Sections (12 Sections)
-  - Features
-  - Testimonials
-  - Team Members
-  - Services
-  - Our Skills
-  - How it Works
-  - Latest Events
-  - Pricing Plans
-  - Top Videos
-  - Our Awesome States
-  - Request a Discount
-  - Footer
+#### Changes
+
+##### These Are Some Changes I've Made From The Main Design:
+
+- Header:
+  - The Hover of The Links.
+- The Main Title of all Sections:
+  - I Made it by Hover Not Animation.
+- Team Members:
+  - I Made exactly The Oppsite as The Main Design is Colored and in Hover is Gray and Mine is The Oppsite as it's Gray and in Hover is Colored
+
+#### What I'll Do
+
+- Build The Remaining Sections (9 Sections To End):
+  - ~~Header.~~
+  - ~~Landing.~~
+  - ~~Articles.~~
+  - ~~Gallery.~~
+  - ~~Features.~~
+  - ~~Testimonials.~~
+  - ~~Team Members.~~
+  - Services.
+  - Our Skills.
+  - How it Works.
+  - Latest Events.
+  - Pricing Plans.
+  - Top Videos.
+  - Our Awesome States.
+  - Request a Discount.
+  - Footer.
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- SASS
-- Flexbox
-- Grid
-- CSS Media Queries
-- Normalize
-- Font Awesome
-- Visual Studio Code
+- Semantic HTML5 markup.
+- CSS custom properties.
+- SASS.
+- Flexbox.
+- Grid.
+- CSS Media Queries.
+- Normalize.
+- Font Awesome.
+- Visual Studio Code.
+- Prepros.
 
 ### Planing To
 
-- Upgrade it by Adding Some Features Using JavaScript
-- Upgrade it by Using React
-- Upgrade it by Adding Dark Mode
-- Upgrade it by Adding Another Language
+- Upgrade it by Adding Some Features Using JavaScript.
+- Upgrade it by Using React.
+- Upgrade it by Adding Dark Mode.
+- Upgrade it by Adding Another Language.
 
 ## Author
 
