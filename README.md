@@ -33,7 +33,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 #### What I Did
 
-- Build The Header & The First Three Sections (7 / 16):
+- Build These Sections (7 / 16):
   - Header "Other Links Menu isn't Build Yet".
   - Landing.
   - Articles.
