@@ -132,31 +132,37 @@ ul {
 //######################################################################
 // Header Start
 header {
+  position: relative;
+  box-shadow: 0 0 10px #ddd;
   .container {
-    height: 72px;
     @include flexBox(space-between, center);
-    h1 {
-      color: #1787e0;
+    flex-wrap: wrap;
+    position: relative;
+    .logo {
+      color: $main-color;
       font-size: 26px;
-    }
-    ul {
+      font-weight: bold;
+      height: 72px;
       @include flexCenter();
-      height: 100%;
+    }
+    .mainNav {
+      display: flex;
       li {
-        @include flexCenter();
-        height: 100%;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        a {
+        .headLinks {
           @include flexCenter();
-          width: 130px;
-          height: 100%;
           color: #000;
           text-transform: capitalize;
+          height: 72px;
+          position: relative;
+          padding: 0 30px;
+          overflow: hidden;
           font-size: 18px;
+          transition: $main-transition;
         }
-        a:after {
+        .headLinks:hover {
+          color: $main-color;
+        }
+        .headLinks:after {
           content: "";
           width: 0%;
           height: 100%;
@@ -165,25 +171,81 @@ header {
           z-index: -1;
           transition: $main-transition;
         }
-        a:hover:after {
+        .headLinks:hover:after {
           width: 100%;
         }
-        a:hover {
-          color: $main-color;
-        }
-        a:before {
+        .headLinks:before {
           content: "";
           width: 0%;
-          height: 5px;
           background-color: $main-color;
           position: absolute;
           top: 0;
           border-radius: 10px;
           transition: $main-transition;
+          height: 4px;
         }
-        a:hover:before {
+        .headLinks:hover:before {
           width: 100%;
         }
+      }
+      .megaMenu-button {
+        .megaMenu {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          padding: 30px;
+          background-color: white;
+          border-bottom: 3px solid $main-color;
+          z-index: -1;
+          display: flex;
+          gap: 40px;
+          top: calc(100% + 50px);
+          opacity: 0;
+          transition: top $main-transition, opacity $main-transition;
+          .imageMenu img {
+            max-width: 100%;
+          }
+          .linksMenu {
+            min-width: 250px;
+            flex: 1;
+            li {
+              position: relative;
+              a {
+                color: $main-color;
+                padding: 15px;
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: capitalize;
+                i {
+                  margin-right: 10px;
+                }
+              }
+            }
+            li:not(:last-child) {
+              border-bottom: 1px solid #e9e6e6;
+            }
+            li::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 0;
+              height: 100%;
+              background-color: #fafafa;
+              z-index: -1;
+              transition: $main-transition;
+            }
+            li:hover::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .megaMenu-button:hover .megaMenu {
+        opacity: 1;
+        z-index: 100;
+        top: 100%;
       }
     }
   }
@@ -191,17 +253,40 @@ header {
 @media (max-width: 767px) and (min-width: 320px) {
   header {
     .container {
-      height: 100px;
-      @include flexBox(center, center);
-      flex-direction: column;
-      h1 {
-        font-size: 20px;
+      .logo {
+        width: 100%;
+        height: 50px;
       }
       ul {
+        margin: auto;
         li {
           a {
+            padding: 10px;
             font-size: 14px;
-            width: 80px;
+            height: 40px;
+          }
+          .megaMenu {
+            flex-direction: column;
+            gap: 0;
+            padding: 5px;
+            .links:first-of-type {
+              li:last-child {
+                border-bottom: 1px solid #e9e6e6;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  header {
+    .container {
+      ul {
+        li {
+          .megaMenu {
+            display: none;
           }
         }
       }
@@ -251,7 +336,7 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50px;
+    bottom: 60px;
     animation: bouncing 1.5s infinite;
   }
 }
@@ -263,7 +348,7 @@ header {
   position: absolute;
   transform: skewY(-6deg);
   transform-origin: top left;
-  top: -50px;
+  top: -60px;
   z-index: -1;
 }
 @media (max-width: 1023px) and (min-width: 768px) {
