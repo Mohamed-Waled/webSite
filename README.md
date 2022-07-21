@@ -33,14 +33,17 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 #### What I Did
 
-- Build These Sections (7 / 16):
-  - Header "Other Links Menu isn't Build Yet".
+- Build These Sections (10 / 16):
+  - Header.
   - Landing.
   - Articles.
   - Gallery.
   - Features.
   - Testimonials.
   - Team Members.
+  - Services.
+  - Our Skills.
+  - How it Works.
 
 #### Changes
 
@@ -55,7 +58,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 #### What I'll Do
 
-- Build The Remaining Sections (9 Sections To End):
+- Build The Remaining Sections (6 Sections To End):
   - ~~Header.~~
   - ~~Landing.~~
   - ~~Articles.~~
@@ -63,9 +66,9 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - ~~Features.~~
   - ~~Testimonials.~~
   - ~~Team Members.~~
-  - Services.
-  - Our Skills.
-  - How it Works.
+  - ~~Services.~~
+  - ~~Our Skills.~~
+  - ~~How it Works.~~
   - Latest Events.
   - Pricing Plans.
   - Top Videos.
