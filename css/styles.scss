@@ -742,6 +742,147 @@ header {
 }
 // Team Members End
 //######################################################################
+// Services Start
+#services {
+  padding: $main-padding-top 0 $main-padding-bottom;
+  background-color: $section-background;
+  h2 {
+    z-index: 5;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    .boxServices {
+      background-color: white;
+      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+      counter-increment: services;
+      transition: $main-transition;
+      position: relative;
+      .icon {
+        margin: 30px auto 20px;
+        display: block;
+        text-align: center;
+        color: #d5d5d5;
+      }
+      h3 {
+        text-align: center;
+        margin: 20px 0 40px;
+        font-size: 25px;
+        color: $main-color;
+        text-transform: capitalize;
+      }
+      .footerServices {
+        padding: 15px;
+        position: relative;
+        background-color: #f9f9f9;
+        text-align: right;
+        a {
+          display: block;
+          color: $main-color;
+          text-transform: capitalize;
+        }
+      }
+      .footerServices::before {
+        content: "0" counter(services);
+        position: absolute;
+        background-color: $main-color;
+        color: white;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 80px;
+        font-size: 30px;
+        font-weight: bold;
+        @include flexCenter();
+        padding-right: 15px;
+      }
+      .footerServices::after {
+        content: "";
+        position: absolute;
+        background-color: #d5d5d5;
+        top: 0;
+        left: 80px;
+        width: 50px;
+        height: calc(100% + 0.4px);
+        transform: skewX(-30deg);
+      }
+    }
+    .boxServices::before {
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      top: -3px;
+      background-color: $main-color;
+      position: absolute;
+      width: 0;
+      transition: $main-transition;
+    }
+    .boxServices:hover::before {
+      width: 100%;
+    }
+    .boxServices:hover {
+      transform: translateY(-10px);
+    }
+  }
+}
+// Services End
+//######################################################################
+// Our Skills Start
+#ourSkills {
+  padding: $main-padding-top 0 $main-padding-bottom;
+  .container {
+    @include flexBox(unset, center);
+    .skills {
+      flex: 1;
+      .skill {
+        h3 {
+          @include flexBox(space-between, center);
+          margin: 18px 0;
+          span {
+            font-size: 12px;
+            border: 1px solid #ccc;
+            padding: 3px 5px;
+            border-radius: 4px;
+            color: $main-color;
+          }
+        }
+        .the-progress {
+          height: 30px;
+          background-color: #eee;
+          position: relative;
+          span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: $main-color;
+          }
+          .progress1 {
+            width: 80%;
+          }
+          .progress2 {
+            width: 85%;
+          }
+          .progress3 {
+            width: 70%;
+          }
+          .progress4 {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .ourSkills img {
+    display: none;
+  }
+}
+// Our Skills End
+//######################################################################
 // Animation Start
 @keyframes up-and-down {
   0%,

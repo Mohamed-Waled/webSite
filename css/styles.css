@@ -851,6 +851,174 @@ header .container ul li a:hover:before {
   color: #2196f3;
 }
 
+#services {
+  padding: 100px 0 100px;
+  background-color: #ececec;
+}
+#services h2 {
+  z-index: 5;
+}
+#services .container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+#services .container .boxServices {
+  background-color: white;
+  -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  counter-increment: services;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+}
+#services .container .boxServices .icon {
+  margin: 30px auto 20px;
+  display: block;
+  text-align: center;
+  color: #d5d5d5;
+}
+#services .container .boxServices h3 {
+  text-align: center;
+  margin: 20px 0 40px;
+  font-size: 25px;
+  color: #2196f3;
+  text-transform: capitalize;
+}
+#services .container .boxServices .footerServices {
+  padding: 15px;
+  position: relative;
+  background-color: #f9f9f9;
+  text-align: right;
+}
+#services .container .boxServices .footerServices a {
+  display: block;
+  color: #2196f3;
+  text-transform: capitalize;
+}
+#services .container .boxServices .footerServices::before {
+  content: "0" counter(services);
+  position: absolute;
+  background-color: #2196f3;
+  color: white;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 15px;
+}
+#services .container .boxServices .footerServices::after {
+  content: "";
+  position: absolute;
+  background-color: #d5d5d5;
+  top: 0;
+  left: 80px;
+  width: 50px;
+  height: calc(100% + 0.4px);
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+}
+#services .container .boxServices::before {
+  content: "";
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 3px;
+  top: -3px;
+  background-color: #2196f3;
+  position: absolute;
+  width: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+#services .container .boxServices:hover::before {
+  width: 100%;
+}
+#services .container .boxServices:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#ourSkills {
+  padding: 100px 0 100px;
+}
+#ourSkills .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#ourSkills .container .skills {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#ourSkills .container .skills .skill h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 18px 0;
+}
+#ourSkills .container .skills .skill h3 span {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: #2196f3;
+}
+#ourSkills .container .skills .skill .the-progress {
+  height: 30px;
+  background-color: #eee;
+  position: relative;
+}
+#ourSkills .container .skills .skill .the-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #2196f3;
+}
+#ourSkills .container .skills .skill .the-progress .progress1 {
+  width: 80%;
+}
+#ourSkills .container .skills .skill .the-progress .progress2 {
+  width: 85%;
+}
+#ourSkills .container .skills .skill .the-progress .progress3 {
+  width: 70%;
+}
+#ourSkills .container .skills .skill .the-progress .progress4 {
+  width: 80%;
+}
+
+@media (max-width: 991px) {
+  .ourSkills img {
+    display: none;
+  }
+}
 @-webkit-keyframes up-and-down {
   0%, 100% {
     top: 0;
@@ -859,7 +1027,6 @@ header .container ul li a:hover:before {
     top: -50px;
   }
 }
-
 @keyframes up-and-down {
   0%, 100% {
     top: 0;
