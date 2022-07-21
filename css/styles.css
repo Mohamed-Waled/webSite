@@ -1015,7 +1015,7 @@ header .container ul li a:hover:before {
 }
 
 @media (max-width: 991px) {
-  .ourSkills img {
+  #ourSkills .container img {
     display: none;
   }
 }
