@@ -17,10 +17,12 @@
 // Variables
 $main-color: #2196f3;
 $main-color-alt: #1787e0;
+$section-background-color: #ececec;
+$paragraph-color: #777;
+$white-color: white;
 $main-transition: 0.4s;
-$main-padding-top: 100px;
-$main-padding-bottom: 100px;
-$section-background: #ececec;
+$main-line-height: 1.7;
+$main-padding: 100px 0;
 
 * {
   margin: 0;
@@ -126,8 +128,22 @@ ul {
 
 .mainTitle:hover {
   transition-delay: 0.8s;
-  color: white;
-  border: 2px solid white;
+  color: $white-color;
+  border: 2px solid $white-color;
+}
+.spikes {
+  position: relative;
+}
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, $white-color 25%, transparent 25%),
+    linear-gradient(225deg, $white-color 25%, transparent 25%);
+  background-size: 30px 30px;
 }
 // Global Rules End
 //######################################################################
@@ -195,7 +211,7 @@ header {
           width: 100%;
           left: 0;
           padding: 30px;
-          background-color: white;
+          background-color: $white-color;
           border-bottom: 3px solid $main-color;
           z-index: -1;
           display: flex;
@@ -318,8 +334,8 @@ header {
       }
       p {
         font-size: 23px;
-        line-height: 1.7;
-        color: #666;
+        line-height: $main-line-height;
+        color: $paragraph-color;
         text-transform: capitalize;
         max-width: 500px;
       }
@@ -354,7 +370,7 @@ header {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: $section-background;
+  background-color: $section-background-color;
   position: absolute;
   transform: skewY(-6deg);
   transform-origin: top left;
@@ -404,7 +420,7 @@ header {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: $section-background;
+    background-color: $section-background-color;
     position: absolute;
     transform: skewY(-6deg);
     transform-origin: top left;
@@ -416,14 +432,14 @@ header {
 //######################################################################
 // Articles Start
 #articles {
-  padding: $main-padding-top 0 $main-padding-bottom;
+  padding: $main-padding;
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 40px;
     .box {
       box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
-      background-color: white;
+      background-color: $white-color;
       border-radius: 6px;
       overflow: hidden;
       transition: $main-transition;
@@ -442,7 +458,7 @@ header {
         p {
           margin: 10px 0 0;
           line-height: 1.5;
-          color: #777;
+          color: $paragraph-color;
         }
       }
       .cardFooter {
@@ -472,8 +488,8 @@ header {
 //######################################################################
 // Gallery Start
 #gallery {
-  padding: $main-padding-top 0 $main-padding-bottom;
-  background-color: $section-background;
+  padding: $main-padding;
+  background-color: $section-background-color;
   .mainTitle {
     z-index: 5;
   }
@@ -484,7 +500,7 @@ header {
     .box {
       position: relative;
       padding: 15px;
-      background-color: white;
+      background-color: $white-color;
       box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
         0px 2px 4px 0px rgb(0 0 0 / 12%);
       overflow: hidden;
@@ -521,7 +537,7 @@ header {
 //######################################################################
 // Features Start
 #features {
-  padding: $main-padding-top 0 $main-padding-bottom;
+  padding: $main-padding;
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -552,7 +568,7 @@ header {
         bottom: 0;
         border-style: solid;
         border-width: 0 0 170px 500px;
-        border-color: transparent transparent white transparent;
+        border-color: transparent transparent $white-color transparent;
         transition: $main-transition;
       }
       .featuresText {
@@ -576,7 +592,7 @@ header {
           bottom: -20px;
         }
         p {
-          color: #777;
+          color: $paragraph-color;
           line-height: 2;
           font-size: 20px;
           margin: 30px 0;
@@ -593,7 +609,7 @@ header {
           padding: 10px 30px;
           border-radius: 6px;
           text-transform: capitalize;
-          transition: var(--main-transition);
+          transition: $main-transition;
           position: relative;
         }
       }
@@ -640,7 +656,7 @@ header {
     }
     .quality:hover .featuresButton a {
       transition-delay: 0.1s;
-      color: white;
+      color: $white-color;
     }
     .time .featuresButton a {
       border: 3px solid #009688;
@@ -663,7 +679,7 @@ header {
     }
     .time:hover .featuresButton a {
       transition-delay: 0.1s;
-      color: white;
+      color: $white-color;
     }
     .passion .featuresButton a {
       border: 3px solid #03a9f4;
@@ -686,7 +702,7 @@ header {
     }
     .passion:hover .featuresButton a {
       transition-delay: 0.1s;
-      color: white;
+      color: $white-color;
     }
   }
 }
@@ -694,8 +710,8 @@ header {
 //######################################################################
 // Testimonials Start
 #testimonials {
-  padding: $main-padding-top 0 $main-padding-bottom;
-  background-color: $section-background;
+  padding: $main-padding;
+  background-color: $section-background-color;
   h2 {
     z-index: 5;
   }
@@ -705,7 +721,7 @@ header {
     gap: 40px;
     .box {
       padding: 20px;
-      background-color: white;
+      background-color: $white-color;
       box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
       border-radius: 6px;
       position: relative;
@@ -718,7 +734,7 @@ header {
           }
           p {
             text-transform: capitalize;
-            color: #777;
+            color: $paragraph-color;
             margin-bottom: 10px;
           }
         }
@@ -736,7 +752,7 @@ header {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            border: 10px solid $section-background;
+            border: 10px solid $section-background-color;
           }
         }
       }
@@ -744,7 +760,7 @@ header {
         cursor: default;
         p {
           line-height: 1.5;
-          color: #777;
+          color: $paragraph-color;
           margin: 10px 0 0;
         }
       }
@@ -755,7 +771,7 @@ header {
 //######################################################################
 // Team Members Start
 #teamMembers {
-  padding: $main-padding-top 0 $main-padding-bottom;
+  padding: $main-padding;
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -780,11 +796,11 @@ header {
           width: 60px;
           gap: 20px;
           a {
-            color: #777;
+            color: $paragraph-color;
             width: 60px;
             height: 30px;
             @include flexCenter();
-            transition: var(--main-transition);
+            transition: $main-transition;
           }
           a:hover {
             color: $main-color-alt;
@@ -798,7 +814,7 @@ header {
         h3 {
           margin-bottom: 0;
           margin-top: 22px;
-          color: #777;
+          color: $paragraph-color;
           font-size: 22px;
           transition: $main-transition;
         }
@@ -847,8 +863,8 @@ header {
 //######################################################################
 // Services Start
 #services {
-  padding: $main-padding-top 0 $main-padding-bottom;
-  background-color: $section-background;
+  padding: $main-padding;
+  background-color: $section-background-color;
   h2 {
     z-index: 5;
   }
@@ -857,7 +873,7 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
     .boxServices {
-      background-color: white;
+      background-color: $white-color;
       box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
       counter-increment: services;
       transition: $main-transition;
@@ -891,7 +907,7 @@ header {
         content: "0" counter(services);
         position: absolute;
         background-color: $main-color;
-        color: white;
+        color: $white-color;
         left: 0;
         top: 0;
         height: 100%;
@@ -935,7 +951,7 @@ header {
 //######################################################################
 // Our Skills Start
 #ourSkills {
-  padding: $main-padding-top 0 $main-padding-bottom;
+  padding: $main-padding;
   .container {
     @include flexBox(unset, center);
     .skills {
@@ -990,8 +1006,8 @@ header {
 //######################################################################
 // How It Works Start
 #howItWorks {
-  padding: $main-padding-top 0 $main-padding-bottom;
-  background-color: $section-background;
+  padding: $main-padding;
+  background-color: $section-background-color;
   h2 {
     z-index: 5;
   }
@@ -1008,7 +1024,7 @@ header {
         margin-bottom: 20px;
         border-radius: 6px;
         @include flexBox(unset, center);
-        border: 2px solid white;
+        border: 2px solid $white-color;
         position: relative;
         z-index: 1;
         img {
@@ -1022,8 +1038,8 @@ header {
           font-size: 22px;
         }
         p {
-          color: #777;
-          line-height: 1.7;
+          color: $paragraph-color;
+          line-height: $main-line-height;
           margin: 10px 0 0;
           font-size: 18px;
           cursor: default;
@@ -1093,7 +1109,7 @@ header {
     left: 0;
   }
   position: relative;
-  padding: $main-padding-top 0 $main-padding-bottom;
+  padding: $main-padding;
   .container {
     @include flexBox(unset, center);
     flex-wrap: wrap;
@@ -1148,9 +1164,9 @@ header {
     .description {
       cursor: default;
       text-align: center;
-      line-height: 1.7;
+      line-height: $main-line-height;
       font-size: 19px;
-      color: #777;
+      color: $paragraph-color;
       margin: 19px 0;
     }
     .subscribe {
@@ -1182,7 +1198,7 @@ header {
           border-radius: 50px;
           border: none;
           background-color: $main-color;
-          color: white;
+          color: $white-color;
           font-weight: bold;
           padding: 20px;
           cursor: pointer;
@@ -1235,8 +1251,8 @@ header {
 //######################################################################
 // Pricing Plans Start
 #pricingPlans {
-  padding: $main-padding-top 0 $main-padding-bottom;
-  background-color: $section-background;
+  padding: $main-padding;
+  background-color: $section-background-color;
   position: relative;
   .dots {
     background-image: url("../images/dots.png");
@@ -1264,7 +1280,7 @@ header {
       position: relative;
       box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
       transition: $main-transition;
-      background: white;
+      background: $white-color;
       text-align: center;
       z-index: 1;
       text-transform: capitalize;
@@ -1289,7 +1305,7 @@ header {
           color: $main-color;
         }
         .time {
-          color: #777;
+          color: $paragraph-color;
         }
       }
       ul {
@@ -1320,7 +1336,7 @@ header {
       a:hover {
         background-color: $main-color-alt;
         border-color: $main-color-alt;
-        color: white;
+        color: $white-color;
       }
     }
     .boxPricing::before,
@@ -1349,7 +1365,7 @@ header {
       position: absolute;
       writing-mode: vertical-rl;
       background-color: $main-color;
-      color: white;
+      color: $white-color;
       font-weight: bold;
       padding: 10px 10px 35px 10px;
       font-size: 18px;
@@ -1362,7 +1378,7 @@ header {
       bottom: 0;
       right: 0;
       border-style: solid;
-      border-color: transparent transparent white;
+      border-color: transparent transparent $white-color;
       border-width: 20px;
       transition: $main-transition;
     }
@@ -1384,16 +1400,16 @@ header {
 //######################################################################
 // Top Videos Start
 #topVideos {
-  padding: $main-padding-top 0 $main-padding-bottom;
+  padding: $main-padding;
   .container {
     .holder {
       text-transform: capitalize;
       @include flexBox(center, unset);
-      background-color: $section-background;
+      background-color: $section-background-color;
       border: 1px solid #ddd;
       .list {
         min-width: 300px;
-        background-color: white;
+        background-color: $white-color;
         .name {
           @include flexBox(space-between, unset);
           padding: 20px;
@@ -1407,14 +1423,14 @@ header {
           max-height: 500px;
           li {
             padding: 20px 10px;
-            border-top: 1px solid $section-background;
+            border-top: 1px solid $section-background-color;
             cursor: pointer;
             transition: $main-transition;
             @include flexBox(space-between, center);
             font-size: 15px;
             span {
               margin-top: 4px;
-              color: #777;
+              color: $paragraph-color;
             }
           }
           li:hover {
@@ -1433,7 +1449,7 @@ header {
         }
         .info {
           padding: 20px;
-          background-color: white;
+          background-color: $white-color;
           margin-top: 10px;
           cursor: default;
         }
@@ -1481,7 +1497,7 @@ header {
 // Our Awesome Stats Start
 #ourAwesomeStats {
   text-transform: capitalize;
-  padding: $main-padding-top 0 $main-padding-bottom;
+  padding: $main-padding;
   position: relative;
   background-image: url("../images/stats.jpg");
   background-size: cover;
@@ -1499,7 +1515,7 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     .box {
-      background-color: white;
+      background-color: $white-color;
       padding: 30px 15px;
       text-align: center;
       position: relative;
@@ -1567,7 +1583,7 @@ header {
   .image {
     background-image: url(../images/discount-background1.jpg);
     background-size: cover;
-    color: white;
+    color: $white-color;
     flex-basis: 50%;
     @include flexCenter();
     position: relative;
@@ -1616,7 +1632,7 @@ header {
       width: 100%;
       padding: 15px;
       background-color: $main-color;
-      color: white;
+      color: $white-color;
       font-weight: bold;
       font-size: 20px;
       border: none;
@@ -1672,7 +1688,7 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 40px;
     h3 {
-      color: white;
+      color: $white-color;
       font-size: 50px;
       margin: 0 0 20px;
     }
@@ -1719,7 +1735,7 @@ header {
           padding-left: 10px;
         }
         li:hover a {
-          color: white;
+          color: $white-color;
         }
         li a {
           color: #b9b9b9;
@@ -1744,7 +1760,7 @@ header {
           margin-right: 10px;
         }
         .info {
-          line-height: 1.7;
+          line-height: $main-line-height;
           flex: 1;
           span {
             display: block;
@@ -1753,11 +1769,42 @@ header {
       }
     }
     .footer-gallery {
-      img {
-        width: 78px;
-        border: 3px solid white;
-        margin: 2px;
+      @include flexCenter();
+      flex-wrap: wrap;
+      gap: 10px;
+      .card {
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+          0px 2px 4px 0px rgb(0 0 0 / 12%);
+        width: min-content;
+        .footerPhoto {
+          overflow: hidden;
+          transition: $main-transition;
+          img {
+            width: 78px;
+            transition: $main-transition;
+          }
+        }
       }
+    }
+    .footerPhoto::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(255 255 255 / 20%);
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: 2;
+    }
+    .footerPhoto:hover::before {
+      animation: flashing 0.7s;
+    }
+    .footerPhoto:hover img {
+      transform: rotate(5deg) scale(1.1);
     }
   }
   .copyright {
@@ -1765,9 +1812,9 @@ header {
     text-align: center;
     margin: 50px 0 0;
     border-top: 1px solid #444;
-    color: white;
+    color: $white-color;
     a {
-      color: white;
+      color: $white-color;
       transition: $main-transition;
     }
     a:hover {

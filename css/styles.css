@@ -113,6 +113,21 @@ ul {
   border: 2px solid white;
 }
 
+.spikes {
+  position: relative;
+}
+
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+
 header {
   position: relative;
   -webkit-box-shadow: 0 0 10px #ddd;
@@ -327,7 +342,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 .landing .container .text p {
   font-size: 23px;
   line-height: 1.7;
-  color: #666;
+  color: #777;
   text-transform: capitalize;
   max-width: 500px;
 }
@@ -455,7 +470,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   }
 }
 #articles {
-  padding: 100px 0 100px;
+  padding: 100px 0;
 }
 #articles .container {
   display: -ms-grid;
@@ -521,7 +536,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 
 #gallery {
-  padding: 100px 0 100px;
+  padding: 100px 0;
   background-color: #ececec;
 }
 #gallery .mainTitle {
@@ -574,7 +589,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 
 #features {
-  padding: 100px 0 100px;
+  padding: 100px 0;
 }
 #features .container {
   display: -ms-grid;
@@ -666,8 +681,8 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   padding: 10px 30px;
   border-radius: 6px;
   text-transform: capitalize;
-  -webkit-transition: var(--main-transition);
-  transition: var(--main-transition);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   position: relative;
 }
 #features .container .box:hover .featuresPhoto::after {
@@ -768,7 +783,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 
 #testimonials {
-  padding: 100px 0 100px;
+  padding: 100px 0;
   background-color: #ececec;
 }
 #testimonials h2 {
@@ -825,7 +840,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 
 #teamMembers {
-  padding: 100px 0 100px;
+  padding: 100px 0;
 }
 #teamMembers .container {
   display: -ms-grid;
@@ -881,8 +896,8 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: var(--main-transition);
-  transition: var(--main-transition);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 #teamMembers .container .card .top .iconsTeam a:hover {
   color: #1787e0;
@@ -941,7 +956,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 
 #services {
-  padding: 100px 0 100px;
+  padding: 100px 0;
   background-color: #ececec;
 }
 #services h2 {
@@ -1042,7 +1057,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 
 #ourSkills {
-  padding: 100px 0 100px;
+  padding: 100px 0;
 }
 #ourSkills .container {
   display: -webkit-box;
@@ -1113,7 +1128,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   }
 }
 #howItWorks {
-  padding: 100px 0 100px;
+  padding: 100px 0;
   background-color: #ececec;
 }
 #howItWorks h2 {
@@ -1213,7 +1228,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 #latestEvents {
   position: relative;
-  padding: 100px 0 100px;
+  padding: 100px 0;
 }
 #latestEvents .dots {
   background-image: url("../images/dots.png");
@@ -1414,7 +1429,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   }
 }
 #pricingPlans {
-  padding: 100px 0 100px;
+  padding: 100px 0;
   background-color: #ececec;
   position: relative;
 }
@@ -1567,7 +1582,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   }
 }
 #topVideos {
-  padding: 100px 0 100px;
+  padding: 100px 0;
 }
 #topVideos .container .holder {
   text-transform: capitalize;
@@ -1679,7 +1694,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 }
 #ourAwesomeStats {
   text-transform: capitalize;
-  padding: 100px 0 100px;
+  padding: 100px 0;
   position: relative;
   background-image: url("../images/stats.jpg");
   background-size: cover;
@@ -2019,10 +2034,59 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
 .footer .container .box .line .info span {
   display: block;
 }
-.footer .container .footer-gallery img {
+.footer .container .footer-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+.footer .container .footer-gallery .card {
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.footer .container .footer-gallery .card .footerPhoto {
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.footer .container .footer-gallery .card .footerPhoto img {
   width: 78px;
-  border: 3px solid white;
-  margin: 2px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.footer .container .footerPhoto::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.footer .container .footerPhoto:hover::before {
+  -webkit-animation: flashing 0.7s;
+          animation: flashing 0.7s;
+}
+.footer .container .footerPhoto:hover img {
+  -webkit-transform: rotate(5deg) scale(1.1);
+          transform: rotate(5deg) scale(1.1);
 }
 .footer .copyright {
   padding: 25px 0;
