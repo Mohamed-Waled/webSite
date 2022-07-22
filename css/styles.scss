@@ -1054,6 +1054,371 @@ header {
 }
 // How It Works End
 //######################################################################
+// Latest Events Start
+#latestEvents {
+  .dots {
+    background-image: url("../images/dots.png");
+    height: 186px;
+    width: 204px;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+  .dots-up {
+    top: 200px;
+    right: 0;
+  }
+  .dots-down {
+    bottom: 200px;
+    left: 0;
+  }
+  position: relative;
+  padding: $main-padding-top 0 $main-padding-bottom;
+  .container {
+    @include flexBox(unset, center);
+    flex-wrap: wrap;
+    img {
+      max-width: 450px;
+    }
+    .eventsTime {
+      flex: 1;
+      .time {
+        @include flexCenter();
+        margin: 20px auto;
+        gap: 10px;
+        .unit {
+          border: 1px solid #d4d4d4;
+          border-radius: 6px;
+          text-align: center;
+          width: 75px;
+          transition: $main-transition;
+          span {
+            display: block;
+            transition: $main-transition;
+          }
+          span:first-child {
+            font-size: 35px;
+            padding: 15px;
+            color: $main-color;
+            font-weight: bold;
+          }
+          span:last-child {
+            padding: 8px 10px;
+            font-size: 13px;
+            border-top: 1px solid #d4d4d4;
+          }
+        }
+        .unit:hover {
+          border-color: $main-color;
+        }
+        .unit:hover span:last-child {
+          border-color: $main-color;
+        }
+      }
+    }
+    .title {
+      text-align: center;
+      margin: 40px 0 0;
+      font-size: 30px;
+    }
+    .description {
+      text-align: center;
+      line-height: 1.7;
+      font-size: 19px;
+      color: #777;
+      margin: 19px 0;
+    }
+    .subscribe {
+      width: 100%;
+      margin-top: 50px;
+      form {
+        width: 600px;
+        margin: 20px auto;
+        padding: 30px 40px;
+        background-color: #f6f5f5;
+        border-radius: 50px;
+        display: flex;
+        gap: 20px;
+        input[type="email"] {
+          padding: 20px;
+          border-radius: 50px;
+          border: none;
+          flex: 1;
+          caret-color: $main-color;
+          outline-color: $main-color-alt;
+        }
+        input[type="email"]::placeholder {
+          transition: opacity $main-transition;
+        }
+        input[type="email"]:focus::placeholder {
+          opacity: 0;
+        }
+        input[type="submit"] {
+          border-radius: 50px;
+          border: none;
+          background-color: $main-color;
+          color: white;
+          font-weight: bold;
+          padding: 20px;
+          cursor: pointer;
+          transition: $main-transition;
+        }
+        input[type="submit"]:hover {
+          background-color: $main-color-alt;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  #latestEvents {
+    .dots {
+      display: none;
+    }
+  }
+}
+@media (max-width: 991px) {
+  #latestEvents {
+    .container {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  #latestEvents {
+    .container {
+      .subscribe {
+        form {
+          max-width: 100%;
+          padding: 20px;
+          flex-direction: column;
+          border-radius: 0;
+          input[type="email"] {
+            border-radius: 0;
+          }
+          input[type="submit"] {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// Latest Events End
+//######################################################################
+// Pricing Plans Start
+#pricingPlans {
+  padding: $main-padding-top 0 $main-padding-bottom;
+  background-color: $section-background;
+  position: relative;
+  .dots {
+    background-image: url("../images/dots.png");
+    height: 186px;
+    width: 204px;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+  .dots-up {
+    top: 200px;
+    right: 0;
+  }
+  .dots-down {
+    bottom: 200px;
+    left: 0;
+  }
+  h2 {
+    z-index: 5;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    .boxPricing {
+      position: relative;
+      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+      transition: $main-transition;
+      background: white;
+      text-align: center;
+      z-index: 1;
+      .title {
+        font-weight: bold;
+        margin: 30px 0;
+        font-size: 25px;
+        letter-spacing: -1px;
+      }
+      img {
+        width: 80px;
+        margin-bottom: 30px;
+      }
+      .price {
+        margin-bottom: 20px;
+        .amount {
+          display: block;
+          font-size: 60px;
+          font-weight: bold;
+          margin-bottom: 5px;
+          color: $main-color;
+        }
+        .time {
+          color: #777;
+        }
+      }
+      ul {
+        text-align: left;
+        li {
+          padding: 20px;
+          border-top: 1px solid #eee;
+        }
+        li::before {
+          font-family: "Font Awesome 6 Free";
+          content: "\f00c";
+          margin-right: 10px;
+          font-weight: 900;
+          color: $main-color;
+        }
+      }
+      a {
+        display: block;
+        width: fit-content;
+        border: 2px solid $main-color;
+        color: $main-color;
+        margin: 30px auto 40px;
+        padding: 15px 20px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: $main-transition;
+      }
+      a:hover {
+        background-color: $main-color-alt;
+        border-color: $main-color-alt;
+        color: white;
+      }
+    }
+    .boxPricing::before,
+    .boxPricing::after {
+      content: "";
+      width: 0;
+      height: 50%;
+      background-color: #f6f6f6;
+      position: absolute;
+      z-index: -1;
+      transition: $main-transition;
+    }
+    .boxPricing::before {
+      left: 0;
+      top: 0;
+    }
+    .boxPricing::after {
+      right: 0;
+      bottom: 0;
+    }
+    .boxPricing:hover::before,
+    .boxPricing:hover::after {
+      width: 100%;
+    }
+    .popular .label {
+      position: absolute;
+      writing-mode: vertical-rl;
+      background-color: $main-color;
+      color: white;
+      font-weight: bold;
+      padding: 10px 10px 35px 10px;
+      font-size: 18px;
+      right: 20px;
+      width: 40px;
+    }
+    .popular .label::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-style: solid;
+      border-color: transparent transparent white;
+      border-width: 20px;
+      transition: $main-transition;
+    }
+    .boxPricing:hover .label::before {
+      border-color: transparent transparent #f6f6f6;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #pricingPlans {
+    .container {
+      .popular {
+        top: -20px;
+      }
+    }
+  }
+}
+// Pricing Plans End
+//######################################################################
+// Top Videos Start
+#topVideos {
+  padding: $main-padding-top 0 $main-padding-bottom;
+  .container {
+    .holder {
+      @include flexBox(center, unset);
+      background-color: $section-background;
+      border: 1px solid #ddd;
+      .list {
+        min-width: 300px;
+        background-color: white;
+        .name {
+          @include flexBox(space-between, unset);
+          padding: 20px;
+          background-color: #f4f4f4;
+          font-weight: bold;
+          color: $main-color;
+        }
+        ul {
+          li {
+            padding: 20px 10px;
+            border-top: 1px solid $section-background;
+            cursor: pointer;
+            transition: $main-transition;
+            @include flexBox(space-between, center);
+            font-size: 15px;
+            span {
+              margin-top: 4px;
+              color: #777;
+            }
+          }
+          li:hover {
+            background-color: #fafafa;
+            color: $main-color;
+          }
+        }
+      }
+      .preview {
+        background-color: #e2e2e2;
+        padding: 10px;
+        flex-direction: column;
+        @include flexBox(space-between, unset);
+        img {
+          max-width: 100%;
+        }
+        .info {
+          padding: 20px;
+          background-color: white;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  #topVideos {
+    .container {
+      .holder {
+        flex-direction: column;
+      }
+    }
+  }
+}
+// Top Videos End
+//######################################################################
 // Animation Start
 @keyframes up-and-down {
   0%,

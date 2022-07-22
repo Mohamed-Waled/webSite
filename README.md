@@ -33,7 +33,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 #### What I Did
 
-- Build These Sections (10 / 16):
+- Build These Sections (13 / 16):
   - Header.
   - Landing.
   - Articles.
@@ -44,6 +44,9 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - Services.
   - Our Skills.
   - How it Works.
+  - Latest Events.
+  - Pricing Plans.
+  - Top Videos.
 
 #### Changes
 
@@ -55,10 +58,12 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - I Made it by Hover Not Animation.
 - Team Members:
   - I Made exactly The Oppsite as The Main Design is Colored and in Hover is Gray and Mine is The Oppsite as it's Gray and in Hover is Colored
+- Top Videos:
+- I Put The Time of The Videos in The Same Line as its name so that The Video Player Seems More Realistic and Tidy, and To Remove The Unnecessary Empty Space Under The Video Previewer
 
 #### What I'll Do
 
-- Build The Remaining Sections (6 Sections To End):
+- Build The Remaining Sections (3 Sections To End):
   - ~~Header.~~
   - ~~Landing.~~
   - ~~Articles.~~
@@ -69,9 +74,9 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - ~~Services.~~
   - ~~Our Skills.~~
   - ~~How it Works.~~
-  - Latest Events.
-  - Pricing Plans.
-  - Top Videos.
+  - ~~Latest Events.~~
+  - ~~Pricing Plans.~~
+  - ~~Top Videos.~~
   - Our Awesome States.
   - Request a Discount.
   - Footer.
