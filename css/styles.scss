@@ -1240,6 +1240,16 @@ header {
 @media (max-width: 767px) {
   #latestEvents {
     .container {
+      .eventsTime {
+        .time {
+          .unit {
+            width: 80px;
+            .days {
+              @include flexCenter();
+            }
+          }
+        }
+      }
       .subscribe {
         form {
           max-width: 100%;

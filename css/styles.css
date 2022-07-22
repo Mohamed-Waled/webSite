@@ -1421,6 +1421,20 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   }
 }
 @media (max-width: 767px) {
+  #latestEvents .container .eventsTime .time .unit {
+    width: 80px;
+  }
+  #latestEvents .container .eventsTime .time .unit .days {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   #latestEvents .container .subscribe form {
     max-width: 100%;
     padding: 20px;
