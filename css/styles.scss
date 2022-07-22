@@ -45,7 +45,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1439px) {
   .container {
     width: 1170px;
   }
@@ -79,6 +79,7 @@ ul {
   font-size: 30px;
   position: relative;
   transition: $main-transition;
+  cursor: default;
 }
 
 .mainTitle::before {
@@ -309,14 +310,17 @@ header {
     @include flexBox(center, center);
     .text {
       width: 50%;
+      cursor: default;
       h1 {
         font-size: 40px;
         margin: 0 0 10px;
+        text-transform: capitalize;
       }
       p {
         font-size: 23px;
         line-height: 1.7;
         color: #666;
+        text-transform: capitalize;
         max-width: 500px;
       }
     }
@@ -340,6 +344,10 @@ header {
     transform: translateX(-50%);
     bottom: 60px;
     animation: bouncing 1.5s infinite;
+    transition: $main-transition;
+  }
+  [href="#articles"]:hover {
+    color: $main-color-alt;
   }
 }
 .landing:before {
@@ -425,9 +433,11 @@ header {
         }
       }
       .cardText {
+        cursor: default;
         padding: 20px;
         h3 {
           margin: 0;
+          text-transform: capitalize;
         }
         p {
           margin: 10px 0 0;
@@ -442,6 +452,7 @@ header {
         a {
           color: $main-color;
           font-weight: bold;
+          text-transform: capitalize;
         }
         .icon {
           color: $main-color;
@@ -545,6 +556,7 @@ header {
         transition: $main-transition;
       }
       .featuresText {
+        cursor: default;
         width: 100%;
         text-align: center;
         h3 {
@@ -699,6 +711,7 @@ header {
       position: relative;
       .headerTest {
         .headerText {
+          cursor: default;
           h3 {
             text-transform: capitalize;
             margin: 0 0 10px;
@@ -728,6 +741,7 @@ header {
         }
       }
       .footerTest {
+        cursor: default;
         p {
           line-height: 1.5;
           color: #777;
@@ -779,6 +793,8 @@ header {
       }
       .bottom {
         padding-left: 80px;
+        text-transform: capitalize;
+        cursor: default;
         h3 {
           margin-bottom: 0;
           margin-top: 22px;
@@ -858,6 +874,7 @@ header {
         font-size: 25px;
         color: $main-color;
         text-transform: capitalize;
+        cursor: default;
       }
       .footerServices {
         padding: 15px;
@@ -924,6 +941,7 @@ header {
     .skills {
       flex: 1;
       .skill {
+        cursor: default;
         h3 {
           @include flexBox(space-between, center);
           margin: 18px 0;
@@ -998,6 +1016,8 @@ header {
           margin-right: 30px;
         }
         h3 {
+          text-transform: capitalize;
+          cursor: default;
           margin: 0;
           font-size: 22px;
         }
@@ -1006,6 +1026,7 @@ header {
           line-height: 1.7;
           margin: 10px 0 0;
           font-size: 18px;
+          cursor: default;
         }
       }
       .worksBox::before {
@@ -1086,6 +1107,7 @@ header {
         margin: 20px auto;
         gap: 10px;
         .unit {
+          cursor: default;
           border: 1px solid #d4d4d4;
           border-radius: 6px;
           text-align: center;
@@ -1105,6 +1127,7 @@ header {
             padding: 8px 10px;
             font-size: 13px;
             border-top: 1px solid #d4d4d4;
+            text-transform: capitalize;
           }
         }
         .unit:hover {
@@ -1119,8 +1142,11 @@ header {
       text-align: center;
       margin: 40px 0 0;
       font-size: 30px;
+      text-transform: capitalize;
+      cursor: default;
     }
     .description {
+      cursor: default;
       text-align: center;
       line-height: 1.7;
       font-size: 19px;
@@ -1241,6 +1267,8 @@ header {
       background: white;
       text-align: center;
       z-index: 1;
+      text-transform: capitalize;
+      cursor: default;
       .title {
         font-weight: bold;
         margin: 30px 0;
@@ -1359,6 +1387,7 @@ header {
   padding: $main-padding-top 0 $main-padding-bottom;
   .container {
     .holder {
+      text-transform: capitalize;
       @include flexBox(center, unset);
       background-color: $section-background;
       border: 1px solid #ddd;
@@ -1371,8 +1400,11 @@ header {
           background-color: #f4f4f4;
           font-weight: bold;
           color: $main-color;
+          cursor: default;
         }
         ul {
+          overflow-y: scroll;
+          max-height: 500px;
           li {
             padding: 20px 10px;
             border-top: 1px solid $section-background;
@@ -1403,6 +1435,7 @@ header {
           padding: 20px;
           background-color: white;
           margin-top: 10px;
+          cursor: default;
         }
       }
     }
@@ -1417,10 +1450,37 @@ header {
     }
   }
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  #topVideos {
+    .container {
+      .holder {
+        .list {
+          ul {
+            max-height: 350px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 991px) and (max-width: 1023px) {
+  #topVideos {
+    .container {
+      .holder {
+        .list {
+          ul {
+            max-height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
 // Top Videos End
 //######################################################################
 // Our Awesome Stats Start
 #ourAwesomeStats {
+  text-transform: capitalize;
   padding: $main-padding-top 0 $main-padding-bottom;
   position: relative;
   background-image: url("../images/stats.jpg");
@@ -1432,6 +1492,7 @@ header {
     width: fit-content;
     margin: 0 auto 50px;
     position: relative;
+    cursor: default;
   }
   .container {
     display: grid;
@@ -1450,12 +1511,14 @@ header {
         font-weight: bold;
         margin-top: 10px;
         margin-bottom: 10px;
+        cursor: default;
       }
       .text {
         color: $main-color;
         font-style: italic;
         font-size: 20px;
         font-weight: bold;
+        cursor: default;
       }
     }
     .box::before,
@@ -1500,6 +1563,7 @@ header {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  text-transform: capitalize;
   .image {
     background-image: url(../images/discount-background1.jpg);
     background-size: cover;
@@ -1567,11 +1631,13 @@ header {
     text-align: center;
     padding: 0 20px;
     h2 {
+      cursor: default;
       font-size: 40px;
       letter-spacing: -2px;
       margin: 33px 0;
     }
     p {
+      cursor: default;
       line-height: 1.6;
       font-size: 18px;
       max-width: 500px;
@@ -1599,6 +1665,8 @@ header {
 .footer {
   background-color: #191919;
   padding: 70px 0 0;
+  text-transform: capitalize;
+  cursor: default;
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
