@@ -59,7 +59,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 - Team Members:
   - I Made exactly The Oppsite as The Main Design is Colored and in Hover is Gray and Mine is The Oppsite as it's Gray and in Hover is Colored
 - Top Videos:
-- I Put The Time of The Videos in The Same Line as its name so that The Video Player Seems More Realistic and Tidy, and To Remove The Unnecessary Empty Space Under The Video Previewer
+  - I Put The Time of The Videos in The Same Line as its name so that The Video Player Seems More Realistic and Tidy, and To Remove The Unnecessary Empty Space Under The Video Previewer
 
 #### What I'll Do
 
