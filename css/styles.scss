@@ -131,9 +131,11 @@ ul {
   color: $white-color;
   border: 2px solid $white-color;
 }
+
 .spikes {
   position: relative;
 }
+
 .spikes::after {
   content: "";
   position: absolute;
@@ -145,6 +147,25 @@ ul {
     linear-gradient(225deg, $white-color 25%, transparent 25%);
   background-size: 30px 30px;
 }
+
+::-webkit-scrollbar {
+  background-color: $section-background-color;
+  width: 10px;
+  transition: $main-transition;
+}
+
+::-webkit-scrollbar:hover {
+  width: 20px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: $white-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+}
+
 // Global Rules End
 //######################################################################
 // Header Start
@@ -979,18 +1000,7 @@ header {
             top: 0;
             height: 100%;
             background-color: $main-color;
-          }
-          .progress1 {
-            width: 80%;
-          }
-          .progress2 {
-            width: 85%;
-          }
-          .progress3 {
-            width: 70%;
-          }
-          .progress4 {
-            width: 80%;
+            transition: $main-transition;
           }
         }
       }
@@ -1127,7 +1137,7 @@ header {
           border: 1px solid #d4d4d4;
           border-radius: 6px;
           text-align: center;
-          width: 75px;
+          width: 90px;
           transition: $main-transition;
           span {
             display: block;

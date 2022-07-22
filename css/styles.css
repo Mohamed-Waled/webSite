@@ -128,6 +128,25 @@ ul {
   background-size: 30px 30px;
 }
 
+::-webkit-scrollbar {
+  background-color: #ececec;
+  width: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+::-webkit-scrollbar:hover {
+  width: 20px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2196f3;
+}
+
 header {
   position: relative;
   -webkit-box-shadow: 0 0 10px #ddd;
@@ -1108,18 +1127,8 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   top: 0;
   height: 100%;
   background-color: #2196f3;
-}
-#ourSkills .container .skills .skill .the-progress .progress1 {
-  width: 80%;
-}
-#ourSkills .container .skills .skill .the-progress .progress2 {
-  width: 85%;
-}
-#ourSkills .container .skills .skill .the-progress .progress3 {
-  width: 70%;
-}
-#ourSkills .container .skills .skill .the-progress .progress4 {
-  width: 80%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @media (max-width: 991px) {
@@ -1284,7 +1293,7 @@ header .container .mainNav .megaMenu-button:hover .megaMenu {
   border: 1px solid #d4d4d4;
   border-radius: 6px;
   text-align: center;
-  width: 75px;
+  width: 90px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
