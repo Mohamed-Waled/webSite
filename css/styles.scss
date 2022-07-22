@@ -1419,6 +1419,313 @@ header {
 }
 // Top Videos End
 //######################################################################
+// Our Awesome Stats Start
+#ourAwesomeStats {
+  padding: $main-padding-top 0 $main-padding-bottom;
+  position: relative;
+  background-image: url("../images/stats.jpg");
+  background-size: cover;
+  min-height: 300px;
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    .box {
+      background-color: white;
+      padding: 30px 15px;
+      text-align: center;
+      position: relative;
+      opacity: 0.8;
+      transition: $main-transition;
+      .number {
+        display: block;
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .text {
+        color: $main-color;
+        font-style: italic;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    .box::before,
+    .box::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      background-color: $main-color;
+      transition: 1s;
+      height: 0;
+    }
+    .box::before {
+      top: 0;
+      right: 0;
+    }
+    .box::after {
+      left: 0;
+      bottom: 0;
+    }
+    .box:hover {
+      opacity: 1;
+    }
+    .box:hover::before,
+    .box:hover::after {
+      height: 100%;
+    }
+  }
+}
+#ourAwesomeStats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 95%);
+}
+// Our Awesome Stats End
+//######################################################################
+// Request A Discount Start
+#requestADiscount {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  .image {
+    background-image: url(../images/discount-background1.jpg);
+    background-size: cover;
+    color: white;
+    flex-basis: 50%;
+    @include flexCenter();
+    position: relative;
+    z-index: 1;
+    animation: change-background 10s linear infinite;
+  }
+  .image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23 135 224 / 97%);
+    z-index: -1;
+  }
+  .form {
+    @include flexCenter();
+    flex-basis: 50%;
+    padding-bottom: 50px;
+    .input {
+      display: block;
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 15px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background-color: #f9f9f9;
+      caret-color: $main-color;
+    }
+    .input::placeholder {
+      transition: opacity $main-transition;
+    }
+    .input:focus::placeholder {
+      opacity: 0;
+    }
+    textarea {
+      resize: none;
+      height: 200px;
+    }
+    .input:focus {
+      outline: none;
+    }
+    [type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: $main-color;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      transition: $main-transition;
+    }
+    [type="submit"]:hover {
+      background-color: $main-color-alt;
+    }
+  }
+  .content {
+    text-align: center;
+    padding: 0 20px;
+    h2 {
+      font-size: 40px;
+      letter-spacing: -2px;
+      margin: 33px 0;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+      max-width: 500px;
+    }
+    img {
+      width: 300px;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #requestADiscount {
+    .image {
+      flex-basis: 100%;
+    }
+    .form {
+      flex-basis: 100%;
+    }
+  }
+}
+// Request A Discount End
+//######################################################################
+// Footer Start
+.footer {
+  background-color: #191919;
+  padding: 70px 0 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    h3 {
+      color: white;
+      font-size: 50px;
+      margin: 0 0 20px;
+    }
+    .box {
+      .social {
+        display: flex;
+        li {
+          margin-right: 10px;
+          a {
+            background-color: #313131;
+            color: #b9b9b9;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            transition: $main-transition;
+          }
+          .facebook:hover {
+            background-color: #1877f2;
+          }
+          .twitter:hover {
+            background-color: #1da1f2;
+          }
+          .youtube:hover {
+            background-color: #ff0000;
+          }
+        }
+      }
+      .text {
+        line-height: 2;
+        color: #b9b9b9;
+      }
+      .links {
+        li {
+          padding: 15px 0;
+          transition: $main-transition;
+        }
+        li:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+        li:hover {
+          padding-left: 10px;
+        }
+        li:hover a {
+          color: white;
+        }
+        li a {
+          color: #b9b9b9;
+          transition: $main-transition;
+        }
+        li a::before {
+          font-family: "Font Awesome 6 Free";
+          content: "\F101";
+          font-weight: 900;
+          margin-right: 10px;
+          color: $main-color;
+        }
+      }
+      .line {
+        display: flex;
+        align-items: center;
+        color: #b9b9b9;
+        margin-bottom: 30px;
+        .icon {
+          font-size: 25px;
+          color: $main-color;
+          margin-right: 10px;
+        }
+        .info {
+          line-height: 1.7;
+          flex: 1;
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+    .footer-gallery {
+      img {
+        width: 78px;
+        border: 3px solid white;
+        margin: 2px;
+      }
+    }
+  }
+  .copyright {
+    padding: 25px 0;
+    text-align: center;
+    margin: 50px 0 0;
+    border-top: 1px solid #444;
+    color: white;
+    a {
+      color: white;
+      transition: $main-transition;
+    }
+    a:hover {
+      color: $main-color;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+    .box {
+      .social {
+        justify-content: center;
+      }
+      .line {
+        flex-direction: column;
+        .icon {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+// Footer End
+//######################################################################
 // Animation Start
 @keyframes up-and-down {
   0%,
@@ -1457,6 +1764,15 @@ header {
     opacity: 0;
     width: 200%;
     height: 200%;
+  }
+}
+@keyframes change-background {
+  0%,
+  100% {
+    background-image: url("../images/discount-background1.jpg");
+  }
+  50% {
+    background-image: url("../images/discount-background2.jpg");
   }
 }
 // Animation End
