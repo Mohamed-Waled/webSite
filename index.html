@@ -12,145 +12,156 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <!--Link Normalize-->
 
+    <script src="js/translate.js"></script>
+    <script>
+      function load() {
+        var translate = new Translate();
+        var currentLng = "en"; //'fr'
+        var attributeName = "data-tag";
+        translate.init(attributeName, currentLng);
+        translate.process();
+      }
+    </script>
+
     <title>Website Title</title>
   </head>
-  <body>
+  <body onload="load()">
     <main>
       <!--Start Header-->
       <header>
         <div class="container">
-          <a class="logo" href="https://mohamed-waled.github.io/webSite/"
-            >webSite</a
-          >
+          <a
+            class="logo"
+            href="https://mohamed-waled.github.io/webSite/"
+            data-tag="website"
+          ></a>
           <ul class="mainNav">
             <li>
-              <a href="#articles" class="headLinks">articles</a>
+              <a href="#articles" class="headLinks" data-tag="articles"></a>
             </li>
             <li>
-              <a href="#gallery" class="headLinks">gallery</a>
+              <a href="#gallery" class="headLinks" data-tag="gallery"></a>
             </li>
             <li>
-              <a href="#features" class="headLinks">features</a>
+              <a href="#features" class="headLinks" data-tag="features"></a>
             </li>
             <li class="megaMenu-button">
-              <a href="" class="headLinks">other links</a>
+              <a href="" class="headLinks" data-tag="other links"></a>
               <div class="megaMenu">
                 <div class="imageMenu">
                   <img src="images/megamenu.png" alt="mega-menu" />
                 </div>
                 <ul class="linksMenu">
                   <li>
-                    <a href="#testimonials"
-                      ><i class="far fa-comments fa-fw"></i> testimonials</a
-                    >
+                    <a href="#testimonials" data-tag="testimonials"
+                      ><i class="far fa-comments fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#teamMembers"
-                      ><i class="far fa-user fa-fw"></i> team members</a
-                    >
+                    <a href="#teamMembers" data-tag="team members"
+                      ><i class="far fa-user fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#services"
-                      ><i class="far fa-building fa-fw"></i> services</a
-                    >
+                    <a href="#services" data-tag="services"
+                      ><i class="far fa-building fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#ourSkills"
-                      ><i class="far fa-check-circle fa-fw"></i> our skills</a
-                    >
+                    <a href="#ourSkills" data-tag="our skills"
+                      ><i class="far fa-check-circle fa-fw"></i
+                    ></a>
                   </li>
                   <li>
-                    <a href="#howItWorks"
-                      ><i class="far fa-clipboard fa-fw"></i> how it works</a
-                    >
+                    <a href="#howItWorks" data-tag="how it works"
+                      ><i class="far fa-clipboard fa-fw"></i>
+                    </a>
                   </li>
                 </ul>
                 <ul class="linksMenu">
                   <li>
-                    <a href="#latestEvents"
-                      ><i class="far fa-calendar-alt fa-fw"></i> events</a
-                    >
+                    <a href="#latestEvents" data-tag="events"
+                      ><i class="far fa-calendar-alt fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#pricingPlans"
-                      ><i class="fas fa-server fa-fw"></i> pricing plans</a
-                    >
+                    <a href="#pricingPlans" data-tag="pricing plans"
+                      ><i class="fas fa-server fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#topVideos"
-                      ><i class="far fa-play-circle fa-fw"></i> top videos</a
-                    >
+                    <a href="#topVideos" data-tag="top vidoes"
+                      ><i class="far fa-play-circle fa-fw"></i
+                    ></a>
                   </li>
                   <li>
-                    <a href="#ourAwesomeStats"
-                      ><i class="far fa-chart-bar fa-fw"></i> stats</a
-                    >
+                    <a href="#ourAwesomeStats" data-tag="stats"
+                      ><i class="far fa-chart-bar fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#requestADiscount"
-                      ><i class="fas fa-percent fa-fw"></i> request a
-                      discount</a
-                    >
+                    <a href="#requestADiscount" data-tag="request a discount"
+                      ><i class="fas fa-percent fa-fw"></i
+                    ></a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="button">
-              <button>other links</button>
+              <button data-tag="otherlinks"></button>
               <div class="megaMenu2">
                 <ul class="linksMenu">
                   <li>
-                    <a href="#testimonials"
-                      ><i class="far fa-comments fa-fw"></i> testimonials</a
-                    >
+                    <a href="#testimonials" data-tag="testimonials"
+                      ><i class="far fa-comments fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#teamMembers"
-                      ><i class="far fa-user fa-fw"></i> team members</a
-                    >
+                    <a href="#teamMembers" data-tag="team members"
+                      ><i class="far fa-user fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#services"
-                      ><i class="far fa-building fa-fw"></i> services</a
-                    >
+                    <a href="#services" data-tag="services"
+                      ><i class="far fa-building fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#ourSkills"
-                      ><i class="far fa-check-circle fa-fw"></i> our skills</a
-                    >
+                    <a href="#ourSkills" data-tag="our skills"
+                      ><i class="far fa-check-circle fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#howItWorks"
-                      ><i class="far fa-clipboard fa-fw"></i> how it works</a
-                    >
+                    <a href="#howItWorks" data-tag="how it works"
+                      ><i class="far fa-clipboard fa-fw"></i>
+                    </a>
                   </li>
                 </ul>
                 <ul class="linksMenu">
                   <li>
-                    <a href="#latestEvents"
-                      ><i class="far fa-calendar-alt fa-fw"></i> events</a
-                    >
+                    <a href="#latestEvents" data-tag="events"
+                      ><i class="far fa-calendar-alt fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#pricingPlans"
-                      ><i class="fas fa-server fa-fw"></i> pricing plans</a
-                    >
+                    <a href="#pricingPlans" data-tag="pricing plans"
+                      ><i class="fas fa-server fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#topVideos"
-                      ><i class="far fa-play-circle fa-fw"></i> top videos</a
-                    >
+                    <a href="#topVideos" data-tag="top vidoes"
+                      ><i class="far fa-play-circle fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#ourAwesomeStats"
-                      ><i class="far fa-chart-bar fa-fw"></i> stats</a
-                    >
+                    <a href="#ourAwesomeStats" data-tag="stats"
+                      ><i class="far fa-chart-bar fa-fw"></i>
+                    </a>
                   </li>
                   <li>
-                    <a href="#requestADiscount"
-                      ><i class="fas fa-percent fa-fw"></i> request a
-                      discount</a
-                    >
+                    <a href="#requestADiscount" data-tag="request a discount"
+                      ><i class="fas fa-percent fa-fw"></i>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -163,11 +174,8 @@
       <div class="landing">
         <div class="container">
           <div class="text">
-            <h1>welcome, to website world</h1>
-            <p>
-              here i'm gonna share everything about my life. books I'm reading,
-              games i'm playing, stories and events
-            </p>
+            <h1 data-tag="welcome"></h1>
+            <p data-tag="share"></p>
           </div>
           <div class="photo">
             <img src="images/landing-image.png" alt="landing-image" />
@@ -180,21 +188,18 @@
       <!--End Landing-->
       <!--Start Articles-->
       <div id="articles">
-        <h2 class="mainTitle">articles</h2>
+        <h2 class="mainTitle" data-tag="articles title"></h2>
         <div class="container">
           <div class="box">
             <div class="coverPhoto">
               <img src="images/cat-01.jpg" alt="cat-01" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -203,14 +208,11 @@
               <img src="images/cat-02.jpg" alt="cat-02" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -219,14 +221,11 @@
               <img src="images/cat-03.jpg" alt="cat-03" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -235,14 +234,11 @@
               <img src="images/cat-04.jpg" alt="cat-04" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -251,14 +247,11 @@
               <img src="images/cat-05.jpg" alt="cat-05" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -267,14 +260,11 @@
               <img src="images/cat-06.jpg" alt="cat-06" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -283,14 +273,11 @@
               <img src="images/cat-07.jpg" alt="cat-07" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -299,14 +286,11 @@
               <img src="images/cat-08.jpg" alt="cat-08" />
             </div>
             <div class="cardText">
-              <h3>test title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Reprehenderit
-              </p>
+              <h3 data-tag="test titles"></h3>
+              <p data-tag="test texts"></p>
             </div>
             <div class="cardFooter">
-              <a href="#">read more</a>
+              <a href="" data-tag="links text"> </a>
               <i class="icon fas fa-long-arrow-alt-right"></i>
             </div>
           </div>
@@ -316,7 +300,7 @@
       <!--End Articles-->
       <!--Start Gallery-->
       <div id="gallery">
-        <h2 class="mainTitle">gallery</h2>
+        <h2 class="mainTitle" data-tag="gallery title"></h2>
         <div class="container">
           <div class="box">
             <div class="galleryPhoto">
@@ -353,21 +337,18 @@
       <!--End Gallery-->
       <!--Start Features-->
       <div id="features">
-        <h2 class="mainTitle">features</h2>
+        <h2 class="mainTitle" data-tag="features title"></h2>
         <div class="container">
           <div class="box quality">
             <div class="featuresPhoto">
               <img src="images/features-01.jpg" alt="features-01" />
             </div>
             <div class="featuresText">
-              <h3>quality</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                harum hic veniam eligendi minima
-              </p>
+              <h3 data-tag="quality title"></h3>
+              <p data-tag="test texts features"></p>
             </div>
             <div class="featuresButton">
-              <a href="#">more</a>
+              <a href="" data-tag="links text features"></a>
             </div>
           </div>
           <div class="box time">
@@ -375,14 +356,11 @@
               <img src="images/features-02.jpg" alt="features-02" />
             </div>
             <div class="featuresText">
-              <h3>time</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                harum hic veniam eligendi minima
-              </p>
+              <h3 data-tag="time title"></h3>
+              <p data-tag="test texts features"></p>
             </div>
             <div class="featuresButton">
-              <a href="#">more</a>
+              <a href="" data-tag="links text features"></a>
             </div>
           </div>
           <div class="box passion">
@@ -390,14 +368,11 @@
               <img src="images/features-03.jpg" alt="features-03" />
             </div>
             <div class="featuresText">
-              <h3>passion</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                harum hic veniam eligendi minima
-              </p>
+              <h3 data-tag="passion title"></h3>
+              <p data-tag="test texts features"></p>
             </div>
             <div class="featuresButton">
-              <a href="#">more</a>
+              <a href="" data-tag="links text features"></a>
             </div>
           </div>
         </div>
@@ -405,7 +380,7 @@
       <!--End Features-->
       <!--Start Testimonials-->
       <div id="testimonials">
-        <h2 class="mainTitle">testimonials</h2>
+        <h2 class="mainTitle" data-tag="testimonials title"></h2>
         <div class="container">
           <div class="box">
             <div class="headerTest">
@@ -413,8 +388,8 @@
                 <div class="photoTest">
                   <img src="images/avatar-01.png" alt="avatar-01" />
                 </div>
-                <h3>mohamed farag</h3>
-                <p>full stack developer</p>
+                <h3 data-tag="mohamed name"></h3>
+                <p data-tag="job title"></p>
                 <div class="iconsTest">
                   <i class="filled fas fa-star"></i>
                   <i class="filled fas fa-star"></i>
@@ -425,10 +400,7 @@
               </div>
             </div>
             <div class="footerTest">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                et reiciendis voluptatum, amet est natus quaerat ducimus
-              </p>
+              <p data-tag="test texts testimonials"></p>
             </div>
           </div>
           <div class="box">
@@ -437,8 +409,8 @@
                 <div class="photoTest">
                   <img src="images/avatar-02.png" alt="avatar-02" />
                 </div>
-                <h3>mohamed ibrahim</h3>
-                <p>full stack developer</p>
+                <h3 data-tag="mohamed2 name"></h3>
+                <p data-tag="job title"></p>
                 <div class="iconsTest">
                   <i class="filled fas fa-star"></i>
                   <i class="filled fas fa-star"></i>
@@ -449,10 +421,7 @@
               </div>
             </div>
             <div class="footerTest">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                et reiciendis voluptatum, amet est natus quaerat ducimus
-              </p>
+              <p data-tag="test texts testimonials"></p>
             </div>
           </div>
           <div class="box">
@@ -461,8 +430,8 @@
                 <div class="photoTest">
                   <img src="images/avatar-03.png" alt="avatar-03" />
                 </div>
-                <h3>shady nabil</h3>
-                <p>full stack developer</p>
+                <h3 data-tag="shady name"></h3>
+                <p data-tag="job title"></p>
                 <div class="iconsTest">
                   <i class="filled fas fa-star"></i>
                   <i class="filled fas fa-star"></i>
@@ -473,10 +442,7 @@
               </div>
             </div>
             <div class="footerTest">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                et reiciendis voluptatum, amet est natus quaerat ducimus
-              </p>
+              <p data-tag="test texts testimonials"></p>
             </div>
           </div>
           <div class="box">
@@ -485,8 +451,8 @@
                 <div class="photoTest">
                   <img src="images/avatar-04.png" alt="avatar-04" />
                 </div>
-                <h3>amr hendawy</h3>
-                <p>full stack developer</p>
+                <h3 data-tag="amr name"></h3>
+                <p data-tag="job title"></p>
                 <div class="iconsTest">
                   <i class="filled fas fa-star"></i>
                   <i class="filled fas fa-star"></i>
@@ -497,10 +463,7 @@
               </div>
             </div>
             <div class="footerTest">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                et reiciendis voluptatum, amet est natus quaerat ducimus
-              </p>
+              <p data-tag="test texts testimonials"></p>
             </div>
           </div>
           <div class="box">
@@ -509,8 +472,8 @@
                 <div class="photoTest">
                   <img src="images/avatar-05.png" alt="avatar-05" />
                 </div>
-                <h3>sherief ashraf</h3>
-                <p>full stack developer</p>
+                <h3 data-tag="sherief name"></h3>
+                <p data-tag="job title"></p>
                 <div class="iconsTest">
                   <i class="filled fas fa-star"></i>
                   <i class="filled fas fa-star"></i>
@@ -521,10 +484,7 @@
               </div>
             </div>
             <div class="footerTest">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                et reiciendis voluptatum, amet est natus quaerat ducimus
-              </p>
+              <p data-tag="test texts testimonials"></p>
             </div>
           </div>
           <div class="box">
@@ -533,8 +493,8 @@
                 <div class="photoTest">
                   <img src="images/avatar-06.png" alt="avatar-06" />
                 </div>
-                <h3>osama mohamed</h3>
-                <p>full stack developer</p>
+                <h3 data-tag="osama name"></h3>
+                <p data-tag="job title"></p>
                 <div class="iconsTest">
                   <i class="filled fas fa-star"></i>
                   <i class="filled fas fa-star"></i>
@@ -545,10 +505,7 @@
               </div>
             </div>
             <div class="footerTest">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                et reiciendis voluptatum, amet est natus quaerat ducimus
-              </p>
+              <p data-tag="test texts testimonials"></p>
             </div>
           </div>
         </div>
@@ -556,7 +513,7 @@
       <!--End Testimonials-->
       <!--Start Team Members-->
       <div id="teamMembers">
-        <h2 class="mainTitle">team members</h2>
+        <h2 class="mainTitle" data-tag="team members title"></h2>
         <div class="container">
           <div class="card">
             <div class="top">
@@ -577,8 +534,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
           <div class="card">
@@ -600,8 +557,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
           <div class="card">
@@ -623,8 +580,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
           <div class="card">
@@ -646,8 +603,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
           <div class="card">
@@ -669,8 +626,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
           <div class="card">
@@ -692,8 +649,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
           <div class="card">
@@ -715,8 +672,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
           <div class="card">
@@ -738,8 +695,8 @@
               </div>
             </div>
             <div class="bottom">
-              <h3>name</h3>
-              <p>simple short description</p>
+              <h3 data-tag="test name"></h3>
+              <p data-tag="test description"></p>
             </div>
           </div>
         </div>
@@ -748,48 +705,48 @@
       <!--End Team Members-->
       <!--Start Services-->
       <div id="services">
-        <h2 class="mainTitle">services</h2>
+        <h2 class="mainTitle" data-tag="services title"></h2>
         <div class="container">
           <div class="boxServices">
             <i class="fas fa-user-shield fa-4x icon"></i>
-            <h3>security</h3>
+            <h3 data-tag="service 1"></h3>
             <div class="footerServices">
-              <a href="#">details</a>
+              <a href="" data-tag="links text services"></a>
             </div>
           </div>
           <div class="boxServices">
             <i class="fas fa-tools fa-4x icon"></i>
-            <h3>fixingg issues</h3>
+            <h3 data-tag="service 2"></h3>
             <div class="footerServices">
-              <a href="#">details</a>
+              <a href="" data-tag="links text services"></a>
             </div>
           </div>
           <div class="boxServices">
             <i class="fas fa-map-marked-alt fa-4x icon"></i>
-            <h3>location</h3>
+            <h3 data-tag="service 3"></h3>
             <div class="footerServices">
-              <a href="#">details</a>
+              <a href="" data-tag="links text services"></a>
             </div>
           </div>
           <div class="boxServices">
             <i class="fas fa-laptop-code fa-4x icon"></i>
-            <h3>coding</h3>
+            <h3 data-tag="service 4"></h3>
             <div class="footerServices">
-              <a href="#">details</a>
+              <a href="" data-tag="links text services"></a>
             </div>
           </div>
           <div class="boxServices">
             <i class="fas fa-palette fa-4x icon"></i>
-            <h3>art</h3>
+            <h3 data-tag="service 5"></h3>
             <div class="footerServices">
-              <a href="#">details</a>
+              <a href="" data-tag="links text services"></a>
             </div>
           </div>
           <div class="boxServices">
             <i class="fas fa-bullhorn fa-4x icon"></i>
-            <h3>marketing</h3>
+            <h3 data-tag="service 6"></h3>
             <div class="footerServices">
-              <a href="#">details</a>
+              <a href="" data-tag="links text services"></a>
             </div>
           </div>
         </div>
@@ -797,7 +754,7 @@
       <!--End Services-->
       <!--Start Our Skills-->
       <div id="ourSkills">
-        <h2 class="mainTitle">our skills</h2>
+        <h2 class="mainTitle" data-tag="our skills title"></h2>
         <div class="container">
           <img src="images/skills.png" alt="skills" />
           <div class="skills">
@@ -831,7 +788,7 @@
       <!--End Our Skills-->
       <!--Start How It Works-->
       <div id="howItWorks">
-        <h2 class="mainTitle">how it works</h2>
+        <h2 class="mainTitle" data-tag="how it works title"></h2>
         <div class="container">
           <img
             src="images/work-steps.png"
@@ -842,34 +799,22 @@
             <div class="worksBox">
               <img src="images/work-steps-1.png" alt="work-steps-1" />
               <div class="text">
-                <h3>business analysis</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  nesciunt obcaecati quisquam quis laborum recusandae debitis
-                  vel
-                </p>
+                <h3 data-tag="step 1"></h3>
+                <p data-tag="test texts how it works"></p>
               </div>
             </div>
             <div class="worksBox">
               <img src="images/work-steps-2.png" alt="work-steps-2" />
               <div class="text">
-                <h3>architecture</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  nesciunt obcaecati quisquam quis laborum recusandae debitis
-                  vel
-                </p>
+                <h3 data-tag="step 2"></h3>
+                <p data-tag="test texts how it works"></p>
               </div>
             </div>
             <div class="worksBox">
               <img src="images/work-steps-3.png" alt="work-steps-3" />
               <div class="text">
-                <h3>aevelopement</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  nesciunt obcaecati quisquam quis laborum recusandae debitis
-                  vel
-                </p>
+                <h3 data-tag="step 3"></h3>
+                <p data-tag="test texts how it works"></p>
               </div>
             </div>
           </div>
@@ -880,34 +825,30 @@
       <div id="latestEvents">
         <div class="dots dots-up"></div>
         <div class="dots dots-down"></div>
-        <h2 class="mainTitle">latest events</h2>
+        <h2 class="mainTitle" data-tag="latest events title"></h2>
         <div class="container">
           <img src="images/events.png" alt="events" />
           <div class="eventsTime">
             <div class="time">
               <div class="unit">
                 <span class="days"></span>
-                <span>days</span>
+                <span data-tag="unit 1"></span>
               </div>
               <div class="unit">
                 <span class="hours"></span>
-                <span>hours</span>
+                <span data-tag="unit 2"></span>
               </div>
               <div class="unit">
                 <span class="minutes"></span>
-                <span>minutes</span>
+                <span data-tag="unit 3"></span>
               </div>
               <div class="unit">
                 <span class="seconds"></span>
-                <span>seconds</span>
+                <span data-tag="unit 4"></span>
               </div>
             </div>
-            <h3 class="title">tech masters event 2021</h3>
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero
-              tenetur doloremque iusto ut adipisci quam ratione aliquam
-              excepturi nulla in harum, veritatis porro
-            </p>
+            <h3 class="title" data-tag="info title"></h3>
+            <p class="description" data-tag="test text events"></p>
           </div>
           <div class="subscribe">
             <form action="">
@@ -922,90 +863,87 @@
       <div id="pricingPlans">
         <div class="dots dots-up"></div>
         <div class="dots dots-down"></div>
-        <h2 class="mainTitle">pricing plans</h2>
+        <h2 class="mainTitle" data-tag="pricing plans title"></h2>
         <div class="container">
           <div class="boxPricing">
-            <div class="title">basic</div>
+            <div class="title" data-tag="title 1"></div>
             <img src="images/hosting-basic.png" alt="hosting-basic" />
             <div class="price">
               <span class="amount">$15</span>
-              <span class="time">per month</span>
+              <span class="time" data-tag="duration"></span>
             </div>
             <ul>
-              <li>10GB HDD space</li>
-              <li>5 email addresses</li>
-              <li>2 subdomains</li>
-              <li>4 databases</li>
-              <li>basic support</li>
+              <li data-tag="plan 1 1"></li>
+              <li data-tag="plan 1 2"></li>
+              <li data-tag="plan 1 3"></li>
+              <li data-tag="plan 1 4"></li>
+              <li data-tag="plan 1 5"></li>
             </ul>
-            <a href="#">choose plan</a>
+            <a href="" data-tag="links text plans"></a>
           </div>
           <div class="boxPricing popular">
-            <div class="label">most popular</div>
-            <div class="title">advanced</div>
+            <div class="label" data-tag="label"></div>
+            <div class="title" data-tag="title 2"></div>
             <img src="images/hosting-advanced.png" alt="hosting-advanced" />
             <div class="price">
               <span class="amount">$25</span>
-              <span class="time">per month</span>
+              <span class="time" data-tag="duration"></span>
             </div>
             <ul>
-              <li>20GB HDD space</li>
-              <li>10 email addresses</li>
-              <li>5 subdomains</li>
-              <li>8 databases</li>
-              <li>advanced support</li>
+              <li data-tag="plan 2 1"></li>
+              <li data-tag="plan 2 2"></li>
+              <li data-tag="plan 2 3"></li>
+              <li data-tag="plan 2 4"></li>
+              <li data-tag="plan 2 5"></li>
             </ul>
-            <a href="#">choose plan</a>
+            <a href="" data-tag="links text plans"></a>
           </div>
           <div class="boxPricing">
-            <div class="title">professional</div>
+            <div class="title" data-tag="title 3"></div>
             <img
               src="images/hosting-professional.png"
               alt="hosting-professional"
             />
             <div class="price">
               <span class="amount">$45</span>
-              <span class="time">per month</span>
+              <span class="time" data-tag="duration"></span>
             </div>
             <ul>
-              <li>50GB HDD space</li>
-              <li>20 email addresses</li>
-              <li>10 subdomains</li>
-              <li>20 databases</li>
-              <li>professional support</li>
+              <li data-tag="plan 3 1"></li>
+              <li data-tag="plan 3 2"></li>
+              <li data-tag="plan 3 3"></li>
+              <li data-tag="plan 3 4"></li>
+              <li data-tag="plan 3 5"></li>
             </ul>
-            <a href="#">choose plan</a>
+            <a href="" data-tag="links text plans"></a>
           </div>
         </div>
       </div>
       <!--End Pricing Plans-->
       <!--Start Top Videos-->
       <div id="topVideos">
-        <h2 class="mainTitle">top videos</h2>
+        <h2 class="mainTitle" data-tag="top videos title"></h2>
         <div class="container">
           <div class="holder">
             <div class="list">
-              <div class="name">
-                top videos
+              <div class="name" data-tag="top videos name">
                 <i class="fas fa-random"></i>
               </div>
               <ul>
-                <li>how to create sub domain<span>05:18</span></li>
-                <li>playing with the DNS <span>03:18</span></li>
-                <li>everything about the virtual hosts <span>05:25</span></li>
-                <li>how to monitor your website <span>04:16</span></li>
-                <li>uncharted beating the last boss <span>07:48</span></li>
-                <li>ys oath in felghana overview <span>03:12</span></li>
-                <li>ys series all games ending <span>08:10</span></li>
-                <li>ys series all games ending <span>08:10</span></li>
-                <li>ys series all games ending <span>08:10</span></li>
-                <li>ys series all games ending <span>08:10</span></li>
-                <li>ys series all games ending <span>08:10</span></li>
+                <li><span data-tag="video 1"></span><span>05:18</span></li>
+                <li><span data-tag="video 2"></span><span>03:18</span></li>
+                <li><span data-tag="video 3"></span><span>05:25</span></li>
+                <li><span data-tag="video 4"></span><span>04:16</span></li>
+                <li><span data-tag="video 5"></span><span>07:48</span></li>
+                <li><span data-tag="video 6"></span><span>03:12</span></li>
+                <li><span data-tag="video 7"></span><span>08:10</span></li>
+                <li><span data-tag="video 6"></span><span>08:10</span></li>
+                <li><span data-tag="video 7"></span><span>08:10</span></li>
               </ul>
             </div>
             <div class="preview">
               <img src="images/video-preview.jpg" alt="video-preview" />
-              <div class="info">everything about the virtual hosts</div>
+              <div class="info" data-tag="info"></div>
             </div>
           </div>
         </div>
@@ -1013,27 +951,27 @@
       <!--End Top Videos-->
       <!--Start Our Awesome Stats-->
       <div id="ourAwesomeStats">
-        <h2>our awesome stats</h2>
+        <h2 data-tag="stats title"></h2>
         <div class="container">
           <div class="box">
             <i class="far fa-user fa-2x fa-fw"></i>
             <span class="number" data-goal="150">0</span>
-            <span class="text">clients</span>
+            <span class="text" data-tag="stat 1"></span>
           </div>
           <div class="box">
             <i class="fas fa-code fa-2x fa-fw"></i>
             <span class="number" data-goal="135">0</span>
-            <span class="text">projects</span>
+            <span class="text" data-tag="stat 2"></span>
           </div>
           <div class="box">
             <i class="fas fa-globe-asia fa-2x fa-fw"></i>
             <span class="number" data-goal="50">0</span>
-            <span class="text">countries</span>
+            <span class="text" data-tag="stat 3"></span>
           </div>
           <div class="box">
             <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
             <span class="number" data-goal="500">0</span>
-            <span class="text">money</span>
+            <span class="text" data-tag="stat 4"></span>
           </div>
         </div>
       </div>
@@ -1042,19 +980,14 @@
       <div id="requestADiscount">
         <div class="image">
           <div class="content">
-            <h2>we have a discount</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Excepturi asperiores consectetur, recusandae ratione provident
-              necessitatibus, cumque delectus commodi fuga praesentium beatae.
-              Totam vel similique laborum dicta aperiam odit doloribus corporis.
-            </p>
+            <h2 data-tag="title 1 discount"></h2>
+            <p data-tag="test text discount"></p>
             <img src="images/discount.png" alt="" />
           </div>
         </div>
         <div class="form">
           <div class="content">
-            <h2>request a discount</h2>
+            <h2 data-tag="discount title"></h2>
             <form action="">
               <input
                 class="input"
@@ -1089,48 +1022,43 @@
       <div class="footer">
         <div class="container">
           <div class="box">
-            <h3>webSite</h3>
+            <h3 data-tag="footer title"></h3>
             <ul class="social">
               <li>
-                <a href="#" class="facebook">
+                <a href="" class="facebook">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#" class="twitter">
+                <a href="" class="twitter">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#" class="youtube">
+                <a href="" class="youtube">
                   <i class="fab fa-youtube"></i>
                 </a>
               </li>
             </ul>
-            <p class="text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Temporibus nulla rem, dignissimos iste aspernatur
-            </p>
+            <p class="text" data-tag="test text footer"></p>
           </div>
           <div class="box">
             <ul class="links">
-              <li><a href="#">important link 1</a></li>
-              <li><a href="#">important link 2</a></li>
-              <li><a href="#">important link 3</a></li>
-              <li><a href="#">important link 4</a></li>
-              <li><a href="#">important link 5</a></li>
+              <li><a href="" data-tag="test link 1"></a></li>
+              <li><a href="" data-tag="test link 2"></a></li>
+              <li><a href="" data-tag="test link 3"></a></li>
+              <li><a href="" data-tag="test link 4"></a></li>
+              <li><a href="" data-tag="test link 5"></a></li>
             </ul>
           </div>
           <div class="box">
             <div class="line">
               <i class="fas fa-map-marker-alt fa-fw icon"></i>
-              <div class="info">
-                egypt, giza, inside the sphinx, room number 220
-              </div>
+              <div class="info" data-tag="address"></div>
             </div>
             <div class="line">
               <i class="far fa-clock fa-fw icon"></i>
-              <div class="info">business hours: from 10:00 to 18:00</div>
+              <div class="info" data-tag="time"></div>
             </div>
             <div class="line">
               <i class="fas fa-phone-volume fa-fw icon"></i>
