@@ -305,10 +305,63 @@ header {
           }
         }
       }
-      .megaMenu-button:hover .megaMenu, .megaMenu-button:active .megaMenu {
+      .megaMenu-button:hover .megaMenu {
         opacity: 1;
         z-index: 100;
         top: 100%;
+      }
+    }
+    .button {
+      display: none;
+    }
+  }
+}
+.button {
+  .megaMenu2 {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 30px;
+    background-color: $white-color;
+    border-bottom: 3px solid $main-color;
+    display: flex;
+    gap: 40px;
+    top: -1000%;
+    opacity: 1;
+    transition: top $main-transition, opacity $main-transition;
+    .linksMenu {
+      min-width: 250px;
+      flex: 1;
+      li {
+        position: relative;
+        a {
+          color: $main-color;
+          padding: 15px;
+          display: block;
+          font-size: 18px;
+          font-weight: bold;
+          text-transform: capitalize;
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+      li:not(:last-child) {
+        border-bottom: 1px solid #e9e6e6;
+      }
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background-color: #fafafa;
+        z-index: -1;
+        transition: $main-transition;
+      }
+      li:hover::before {
+        width: 100%;
       }
     }
   }
@@ -343,6 +396,18 @@ header {
         }
       }
     }
+    .button {
+      .megaMenu2 {
+        flex-direction: column;
+        gap: 0;
+        padding: 5px;
+        .linksMenu:first-of-type {
+          li:last-child {
+            border-bottom: 1px solid #e9e6e6;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 991px) {
@@ -350,10 +415,21 @@ header {
     .container {
       ul {
         .megaMenu-button {
+          display: none;
           .megaMenu {
             .imageMenu {
               display: none;
             }
+          }
+        }
+        .button {
+          @include flexCenter();
+          button {
+            text-transform: capitalize;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            margin-left: 6px;
           }
         }
       }

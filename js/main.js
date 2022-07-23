@@ -167,9 +167,23 @@ function hidingShowingHeader() {
   });
 }
 
+function buttonClick() {
+  let button = document.querySelector("button");
+  let megaMenu = document.querySelector(".megaMenu2");
+  console.log(megaMenu);
+  button.addEventListener("click", () => {
+    megaMenu.style.top = `100px`;
+  });
+
+  button.addEventListener("blur", () => {
+    megaMenu.style.top = `-1000%`;
+  });
+}
+
 countDown();
 skillsWidth();
 statsCount();
 dotsEntering();
 dotsOuting();
 hidingShowingHeader();
+buttonClick();

@@ -323,10 +323,68 @@ header .container .mainNav .megaMenu-button .megaMenu .linksMenu li::before {
 header .container .mainNav .megaMenu-button .megaMenu .linksMenu li:hover::before {
   width: 100%;
 }
-header .container .mainNav .megaMenu-button:hover .megaMenu, header .container .mainNav .megaMenu-button:active .megaMenu {
+header .container .mainNav .megaMenu-button:hover .megaMenu {
   opacity: 1;
   z-index: 100;
   top: 100%;
+}
+header .container .button {
+  display: none;
+}
+
+.button .megaMenu2 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 30px;
+  background-color: white;
+  border-bottom: 3px solid #2196f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  top: -1000%;
+  opacity: 1;
+  -webkit-transition: top 0.4s, opacity 0.4s;
+  transition: top 0.4s, opacity 0.4s;
+}
+.button .megaMenu2 .linksMenu {
+  min-width: 250px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.button .megaMenu2 .linksMenu li {
+  position: relative;
+}
+.button .megaMenu2 .linksMenu li a {
+  color: #2196f3;
+  padding: 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.button .megaMenu2 .linksMenu li a i {
+  margin-right: 10px;
+}
+.button .megaMenu2 .linksMenu li:not(:last-child) {
+  border-bottom: 1px solid #e9e6e6;
+}
+.button .megaMenu2 .linksMenu li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fafafa;
+  z-index: -1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.button .megaMenu2 .linksMenu li:hover::before {
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -357,10 +415,42 @@ header .container .mainNav .megaMenu-button:hover .megaMenu, header .container .
   header .container .mainNav li .megaMenu .linksMenu:first-of-type li:last-child {
     border-bottom: 1px solid #e9e6e6;
   }
+  header .button .megaMenu2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    padding: 5px;
+  }
+  header .button .megaMenu2 .linksMenu:first-of-type li:last-child {
+    border-bottom: 1px solid #e9e6e6;
+  }
 }
 @media (max-width: 991px) {
+  header .container ul .megaMenu-button {
+    display: none;
+  }
   header .container ul .megaMenu-button .megaMenu .imageMenu {
     display: none;
+  }
+  header .container ul .button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .container ul .button button {
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 6px;
   }
 }
 .landing {
