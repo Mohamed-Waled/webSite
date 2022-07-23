@@ -79,6 +79,97 @@ function statsCount() {
   }
 }
 
+// Dots Entering
+function dotsEntering() {
+  let section1 = document.querySelector("#latestEvents");
+  let section2 = document.querySelector("#pricingPlans");
+  let dots1 = document.querySelectorAll(".dots-up");
+  let dots2 = document.querySelectorAll(".dots-down");
+
+  // First Section
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section1.offsetTop - 300) {
+      dots1[0].style.right = 0;
+    }
+  });
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section1.offsetTop - 200) {
+      dots2[0].style.left = 0;
+    }
+  });
+
+  // Second Section
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section2.offsetTop - 300) {
+      dots1[1].style.right = 0;
+    }
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section2.offsetTop - 200) {
+      dots2[1].style.left = 0;
+    }
+  });
+}
+
+// Dots Outing
+function dotsOuting() {
+  let section1 = document.querySelector("#latestEvents");
+  let section2 = document.querySelector("#pricingPlans");
+  let dots1 = document.querySelectorAll(".dots-up");
+  let dots2 = document.querySelectorAll(".dots-down");
+
+  // First Section
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section1.offsetTop + 200) {
+      dots1[0].style.right = `-210px`;
+    }
+  });
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section1.offsetTop + 300) {
+      dots2[0].style.left = `-210px`;
+    }
+  });
+
+  // Second Section
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section2.offsetTop + 200) {
+      dots1[1].style.right = `-210px`;
+    }
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= section2.offsetTop + 300) {
+      dots2[1].style.left = `-210px`;
+    }
+  });
+}
+
+function hidingShowingHeader() {
+  let header = document.querySelector("header");
+  let section1 = document.querySelector("#articles");
+  let section2 = document.querySelector(".footer");
+  let scroll1 = window.scrollY;
+
+  document.addEventListener("scroll", () => {
+    if (
+      this.scrollY >= section1.offsetTop &&
+      this.screenY <= section2.offsetTop
+    ) {
+      if (scroll1 > this.scrollY) {
+        header.style.top = "72px";
+        scroll1 = this.scrollY;
+      } else {
+        header.style.top = "-100px";
+        scroll1 = this.scrollY;
+      }
+    }
+  });
+}
+
 countDown();
 skillsWidth();
 statsCount();
+dotsEntering();
+dotsOuting();
+hidingShowingHeader();
