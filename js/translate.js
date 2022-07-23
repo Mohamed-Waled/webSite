@@ -9,7 +9,7 @@ function Translate() {
     _self = this;
     var xrhFile = new XMLHttpRequest();
     //load content data
-    xrhFile.open("GET", "../resources/" + this.lng + ".json", false);
+    xrhFile.open("GET", "./resources/" + this.lng + ".json", false);
     xrhFile.onreadystatechange = function () {
       if (xrhFile.readyState === 4) {
         if (xrhFile.status === 200 || xrhFile.status == 0) {
@@ -19,7 +19,6 @@ function Translate() {
           for (var i = 0; i < allDom.length; i++) {
             var elem = allDom[i];
             var key = elem.getAttribute(_self.attribute);
-
             if (key != null) {
               console.log(key);
               elem.innerHTML += LngObject[key];
