@@ -170,13 +170,31 @@ function hidingShowingHeader() {
 function buttonClick() {
   let button = document.querySelector("button");
   let megaMenu = document.querySelector(".megaMenu2");
-  console.log(megaMenu);
+
   button.addEventListener("click", () => {
     megaMenu.style.top = `100px`;
   });
 
   button.addEventListener("blur", () => {
     megaMenu.style.top = `-1000%`;
+  });
+}
+
+function showUpScrollToTopButton() {
+  let scrollToTopButton = document.querySelector(".scrollToTop");
+
+  window.addEventListener("scroll", () => {
+    if (this.scrollY >= 3000) {
+      scrollToTopButton.classList.add("showUp");
+    } else {
+      scrollToTopButton.classList.remove("showUp");
+    }
+  });
+
+  scrollToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+    });
   });
 }
 
@@ -187,3 +205,4 @@ dotsEntering();
 dotsOuting();
 hidingShowingHeader();
 buttonClick();
+showUpScrollToTopButton();

@@ -113,6 +113,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - Update 3: I've Made a Function That Makes a Count Up in Our Awesome Stats Section to Make an Effect of a Numbers Increases.
   - Update 4: I've Made a Function That Makes The Dots in Latest Events Section and in Pricing Plans Section it Enters The Section When I Reach it And it Leaves The Section When I Leave it.
   - Update 5: I've Made a Function That Makes The Header Hidden When You Scroll Down and it Will Show itself Again When You Scroll Up.
+  - Update 6: I've Add a Scroll To Top Button.
 - Upgrade it by Adding Another Language.
   - Update 1: I Searched About it and Found This Website That Helped Me [How to Create a Multilingual Application using JavaScript](https://www.codeproject.com/Tips/1165561/How-to-Create-a-Multilingual-Application-using-Jav).
   - Update 2: I've Used The Function Provided in The Website Mentioned Above but I Understand Just 10% of it But I Working on it.
