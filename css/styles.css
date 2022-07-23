@@ -323,7 +323,7 @@ header .container .mainNav .megaMenu-button .megaMenu .linksMenu li::before {
 header .container .mainNav .megaMenu-button .megaMenu .linksMenu li:hover::before {
   width: 100%;
 }
-header .container .mainNav .megaMenu-button:hover .megaMenu {
+header .container .mainNav .megaMenu-button:hover .megaMenu, header .container .mainNav .megaMenu-button:active .megaMenu {
   opacity: 1;
   z-index: 100;
   top: 100%;
