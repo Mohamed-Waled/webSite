@@ -482,7 +482,7 @@ header .container .mainNav li .headLinks:hover:before {
 header .container .mainNav .megaMenu-button .megaMenu {
   position: absolute;
   width: 100%;
-  left: 0;
+  left: -1400px;
   padding: 30px;
   background-color: white;
   border-bottom: 3px solid #2196f3;
@@ -491,10 +491,10 @@ header .container .mainNav .megaMenu-button .megaMenu {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
-  top: calc(100% + 50px);
+  top: 100%;
   opacity: 0;
-  -webkit-transition: top 0.4s, opacity 0.4s;
-  transition: top 0.4s, opacity 0.4s;
+  -webkit-transition: left 0.4s, opacity 0.4s;
+  transition: left 0.4s, opacity 0.4s;
 }
 header .container .mainNav .megaMenu-button .megaMenu .imageMenu img {
   max-width: 100%;
@@ -543,7 +543,7 @@ header .container .mainNav .megaMenu-button .megaMenu .darkModeButton-small {
 header .container .mainNav .megaMenu-button:hover .megaMenu {
   opacity: 1;
   z-index: 100;
-  top: 100%;
+  left: 0;
 }
 header .container .button {
   display: none;

@@ -440,17 +440,17 @@ header {
         .megaMenu {
           position: absolute;
           width: 100%;
-          left: 0;
+          left: -1400px;
           padding: 30px;
           background-color: $white-color;
           border-bottom: 3px solid $main-color;
           z-index: -1;
           display: flex;
           gap: 40px;
-          top: calc(100% + 50px);
+          top: 100%;
           // top: -1000%;
           opacity: 0;
-          transition: top $main-transition, opacity $main-transition;
+          transition: left $main-transition, opacity $main-transition;
           .imageMenu img {
             max-width: 100%;
           }
@@ -497,7 +497,8 @@ header {
       .megaMenu-button:hover .megaMenu {
         opacity: 1;
         z-index: 100;
-        top: 100%;
+        // top: 100%;
+        left: 0;
       }
     }
     .button {
