@@ -440,16 +440,16 @@ header {
         .megaMenu {
           position: absolute;
           width: 100%;
-          left: -1400px;
+          left: -1400px !important;
           padding: 30px;
           background-color: $white-color;
           border-bottom: 3px solid $main-color;
-          z-index: -1;
+          z-index: -1 !important;
           display: flex;
           gap: 40px;
           top: 100%;
           // top: -1000%;
-          opacity: 0;
+          opacity: 0 !important;
           transition: left $main-transition, opacity $main-transition;
           .imageMenu img {
             max-width: 100%;
@@ -495,10 +495,10 @@ header {
         }
       }
       .megaMenu-button:hover .megaMenu {
-        opacity: 1;
-        z-index: 100;
+        opacity: 1 !important;
+        z-index: 100 !important;
         // top: 100%;
-        left: 0;
+        left: 0 !important;
       }
     }
     .button {

@@ -242,7 +242,9 @@ function hidingShowingHeader() {
 function buttonClick() {
   let button = document.querySelector("button");
   let megaMenu = document.querySelector(".megaMenu2");
+  let megaMenu2 = document.querySelector(".megaMenu");
   let exit = document.querySelector(".up");
+  let goOut = document.querySelectorAll(".linksMenu li");
 
   button.addEventListener("click", () => {
     megaMenu.style.top = `100%`;
@@ -254,6 +256,14 @@ function buttonClick() {
     megaMenu.style.top = `calc(100% - 20px)`;
     megaMenu.style.opacity = `0`;
     megaMenu.style.zIndex = `-1`;
+  });
+
+  goOut.forEach((li) => {
+    li.addEventListener("click", () => {
+      megaMenu.style.top = `calc(100% - 20px)`;
+      megaMenu.style.opacity = `0`;
+      megaMenu.style.zIndex = `-1`;
+    });
   });
 }
 
