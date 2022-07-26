@@ -113,14 +113,18 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - Update 3: I've Made a Function That Makes a Count Up in Our Awesome Stats Section to Make an Effect of a Numbers Increases.
   - Update 4: I've Made a Function That Makes The Dots in Latest Events Section and in Pricing Plans Section it Enters The Section When I Reach it And it Leaves The Section When I Leave it.
   - Update 5: I've Made a Function That Makes The Header Hidden When You Scroll Down and it Will Show itself Again When You Scroll Up.
-  - Update 6: I've Add a Scroll To Top Button.
+  - Update 6: I've Added a Scroll To Top Button.
+  - Update 7: I've Added Dark Mode Buttons.
 - Upgrade it by Adding Another Language.
   - Update 1: I Searched About it and Found This Website That Helped Me [How to Create a Multilingual Application using JavaScript](https://www.codeproject.com/Tips/1165561/How-to-Create-a-Multilingual-Application-using-Jav).
   - Update 2: I've Used The Function Provided in The Website Mentioned Above but I Understand Just 10% of it But I Working on it.
   - Update 3: I've Made The English JSON File and it Worked Right.
   - Update 4: Mr.[Mohamed Abdallah](https://www.linkedin.com/in/mohamed-abdallah-a94158222/) is a Great Translator and He is Working on The Arabic JSON File Right Now.
-- Upgrade it by Using React.
 - Upgrade it by Adding Dark Mode.
+  - Update 1: I've Choosed The Colors of The Dark Mode.
+  - Update 2: I've Searched Till I found a Cool Button For The Dark Mode.
+  - Update 3: The Dark Mode Has Been Launched.
+- Upgrade it by Using React.
 
 ## Author
 
