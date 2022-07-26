@@ -491,7 +491,7 @@ header .container .mainNav .megaMenu-button .megaMenu {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
-  top: -1000%;
+  top: calc(100% + 50px);
   opacity: 0;
   -webkit-transition: top 0.4s, opacity 0.4s;
   transition: top 0.4s, opacity 0.4s;
@@ -560,8 +560,9 @@ header .container .button {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
-  top: -1000%;
-  opacity: 1;
+  top: calc(100% + 50px);
+  opacity: 0;
+  z-index: -1;
   -webkit-transition: top 0.4s, opacity 0.4s;
   transition: top 0.4s, opacity 0.4s;
 }
@@ -602,6 +603,23 @@ header .container .button {
 }
 .button .megaMenu2 .linksMenu li:hover::before {
   width: 100%;
+}
+.button .megaMenu2 .up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  color: #2196f3;
+  -webkit-animation: bouncing 1.5s infinite;
+          animation: bouncing 1.5s infinite;
+  position: relative;
+  left: 6px;
 }
 
 @media (max-width: 767px) {

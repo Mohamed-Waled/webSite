@@ -447,8 +447,8 @@ header {
           z-index: -1;
           display: flex;
           gap: 40px;
-          // top: calc(100% + 50px);
-          top: -1000%;
+          top: calc(100% + 50px);
+          // top: -1000%;
           opacity: 0;
           transition: top $main-transition, opacity $main-transition;
           .imageMenu img {
@@ -515,8 +515,10 @@ header {
     border-bottom: 3px solid $main-color;
     display: flex;
     gap: 40px;
-    top: -1000%;
-    opacity: 1;
+    // top: -1000%;
+    top: calc(100% + 50px);
+    opacity: 0;
+    z-index: -1;
     transition: top $main-transition, opacity $main-transition;
     .linksMenu {
       min-width: 250px;
@@ -552,6 +554,14 @@ header {
       li:hover::before {
         width: 100%;
       }
+    }
+    .up {
+      @include flexCenter();
+      height: 50px;
+      color: $main-color;
+      animation: bouncing 1.5s infinite;
+      position: relative;
+      left: 6px;
     }
   }
 }

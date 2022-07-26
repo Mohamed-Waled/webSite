@@ -242,13 +242,18 @@ function hidingShowingHeader() {
 function buttonClick() {
   let button = document.querySelector("button");
   let megaMenu = document.querySelector(".megaMenu2");
+  let exit = document.querySelector(".up");
 
   button.addEventListener("click", () => {
-    megaMenu.style.top = `100px`;
+    megaMenu.style.top = `100%`;
+    megaMenu.style.opacity = `1`;
+    megaMenu.style.zIndex = `100`;
   });
 
-  button.addEventListener("blur", () => {
-    megaMenu.style.top = `-1000%`;
+  exit.addEventListener("click", () => {
+    megaMenu.style.top = `calc(100% - 20px)`;
+    megaMenu.style.opacity = `0`;
+    megaMenu.style.zIndex = `-1`;
   });
 }
 
