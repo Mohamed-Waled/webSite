@@ -2352,3 +2352,332 @@ header .container .button {
     background-image: url("../images/discount-background2.jpg");
   }
 }
+.darkMode ::-webkit-scrollbar {
+  background-color: #1f1f1f;
+}
+.darkMode ::-webkit-scrollbar-button {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.dark-mode {
+  background-color: #121212;
+}
+.dark-mode .mainTitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode .mainTitle:hover {
+  color: #1f1f1f;
+  border-color: #1f1f1f;
+}
+.dark-mode .spikes::after {
+  background-image: linear-gradient(135deg, #121212 25%, transparent 25%), linear-gradient(225deg, #121212 25%, transparent 25%);
+}
+.dark-mode header {
+  -webkit-box-shadow: 0 0 10px #1f1f1f;
+          box-shadow: 0 0 10px #1f1f1f;
+  background-color: #1f1f1f;
+}
+.dark-mode header .container .mainNav li .headLinks {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode header .container .mainNav li .headLinks:after {
+  background-color: #121212;
+}
+.dark-mode header .container .mainNav .megaMenu-button .megaMenu {
+  background-color: #1f1f1f;
+}
+.dark-mode header .container .mainNav .megaMenu-button .megaMenu .linksMenu li:not(:last-child) {
+  border-bottom-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode header .container .mainNav .megaMenu-button .megaMenu .linksMenu li::before {
+  background-color: #121212;
+}
+.dark-mode .button button {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode .button .megaMenu2 {
+  background-color: #1f1f1f;
+}
+.dark-mode .button .megaMenu2 .linksMenu li:not(:last-child) {
+  border-bottom-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode .button .megaMenu2 .linksMenu li::before {
+  background-color: #121212;
+}
+@media (max-width: 767px) {
+  .dark-mode header .container .mainNav li .megaMenu .linksMenu:first-of-type li:last-child {
+    border-bottom-color: rgba(255, 255, 255, 0.65);
+  }
+  .dark-mode header .button .megaMenu2 .linksMenu:first-of-type li:last-child {
+    border-bottom-color: rgba(255, 255, 255, 0.65);
+  }
+}
+.dark-mode .landing {
+  background-color: #121212;
+}
+.dark-mode .landing .container .text h1 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode .landing .container .text p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode .landing:before {
+  background-color: #1f1f1f;
+  z-index: unset;
+}
+@media (max-width: 767px) and (min-width: 320px) {
+  .dark-mode .landing:before {
+    background-color: #1f1f1f;
+    z-index: unset;
+  }
+}
+.dark-mode #articles .container .box {
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  background-color: #1f1f1f;
+}
+.dark-mode #articles .container .box .cardText h3 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #articles .container .box .cardText p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #articles .container .box .cardFooter {
+  border-top-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #articles .container .box:hover {
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+}
+.dark-mode #gallery {
+  background-color: #1f1f1f;
+}
+.dark-mode #gallery .container .box {
+  background-color: #121212;
+  -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.5), 0px 2px 4px 0px rgba(0, 0, 0, 0.55);
+          box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.5), 0px 2px 4px 0px rgba(0, 0, 0, 0.55);
+}
+.dark-mode #gallery .container .box .galleryPhoto::before {
+  background-color: rgba(18, 18, 18, 0.2);
+}
+.dark-mode #features .container .box {
+  border-color: rgba(255, 255, 255, 0.65);
+  background-color: #1f1f1f;
+}
+.dark-mode #features .container .box .featuresPhoto::after {
+  border-color: transparent transparent #1f1f1f transparent;
+}
+.dark-mode #features .container .box .featuresText h3 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #features .container .box .featuresText p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #features .container .box .featuresButton a {
+  z-index: 10;
+}
+.dark-mode #features .container .box:hover .featuresButton a {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #testimonials {
+  background-color: #1f1f1f;
+}
+.dark-mode #testimonials .container .box {
+  background-color: #121212;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.dark-mode #testimonials .container .box .headerTest .headerText h3 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #testimonials .container .box .headerTest .headerText p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #testimonials .container .box .headerTest .photoTest img {
+  border-color: #1f1f1f;
+}
+.dark-mode #testimonials .container .box .footerTest p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #teamMembers .container .card .top .iconsTeam a {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #teamMembers .container .card .bottom h3 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #teamMembers .container .card .bottom p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #teamMembers .container .card::before,
+.dark-mode #teamMembers .container .card::after {
+  background-color: #1f1f1f;
+}
+.dark-mode #teamMembers .container .card::after {
+  background-color: #1a1a1a;
+}
+.dark-mode #teamMembers .container .card:hover .bottom h3 {
+  color: #2196f3;
+}
+.dark-mode #teamMembers .container .card:hover .top a {
+  color: #2196f3;
+}
+.dark-mode #teamMembers .container .card:hover .bottom p {
+  color: #1787e0;
+}
+.dark-mode #services {
+  background-color: #1f1f1f;
+}
+.dark-mode #services .container .boxServices {
+  background-color: #121212;
+  -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.55);
+          box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.55);
+}
+.dark-mode #services .container .boxServices .icons {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #services .container .boxServices .footerServices {
+  background-color: #1f1f1f;
+}
+.dark-mode #services .container .boxServices .footerServices::before {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #services .container .boxServices .footerServices::after {
+  background-color: #121212;
+}
+.dark-mode #ourSkills .container .skills .skill h3 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #ourSkills .container .skills .skill h3 span {
+  border-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #ourSkills .container .skills .skill .the-progress {
+  background-color: #1f1f1f;
+}
+.dark-mode #howItWorks {
+  background-color: #1f1f1f;
+}
+.dark-mode #howItWorks .container .steps .worksBox {
+  background-color: #121212;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #howItWorks .container .steps .worksBox h3 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #howItWorks .container .steps .worksBox p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #howItWorks .container .steps .worksBox::before {
+  background-color: #1f1f1f;
+}
+.dark-mode #latestEvents .container .eventsTime .time .unit {
+  border-color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #latestEvents .container .eventsTime .time .unit span:last-child {
+  border-top-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #latestEvents .container .title {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #latestEvents .container .description {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #latestEvents .container .subscribe form {
+  background-color: #1f1f1f;
+}
+.dark-mode #latestEvents .container .subscribe form input[type=submit] {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #pricingPlans {
+  background-color: #1f1f1f;
+}
+.dark-mode #pricingPlans .container .boxPricing {
+  -webkit-box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.55);
+          box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.55);
+  background-color: #121212;
+}
+.dark-mode #pricingPlans .container .boxPricing .title {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #pricingPlans .container .boxPricing .price {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #pricingPlans .container .boxPricing .price .time {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #pricingPlans .container .boxPricing ul li {
+  color: rgba(255, 255, 255, 0.65);
+  border-top-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #pricingPlans .container a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #pricingPlans .container .boxPricing::before,
+.dark-mode #pricingPlans .container .boxPricing::after {
+  background-color: #1f1f1f;
+}
+.dark-mode #pricingPlans .container .popular .label {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #pricingPlans .container .popular .label::before {
+  border-color: transparent transparent #121212;
+}
+.dark-mode #pricingPlans .container .boxPricing:hover .label::before {
+  border-color: transparent transparent #1f1f1f;
+}
+.dark-mode #topVideos .container .holder {
+  background-color: #1f1f1f;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #topVideos .container .holder .list {
+  background-color: #1f1f1f;
+}
+.dark-mode #topVideos .container .holder .list .name {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #121212;
+}
+.dark-mode #topVideos .container .holder .list ul li {
+  border-top-color: #121212;
+}
+.dark-mode #topVideos .container .holder .list ul li span {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #topVideos .container .holder .list ul li:hover {
+  background-color: #121212;
+}
+.dark-mode #topVideos .container .holder .preview {
+  background-color: #1f1f1f;
+}
+.dark-mode #topVideos .container .holder .preview .info {
+  color: rgba(255, 255, 255, 0.65);
+  background-color: #121212;
+}
+.dark-mode #ourAwesomeStats h2 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #ourAwesomeStats .container .box {
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #ourAwesomeStats::before {
+  background-color: rgba(31, 31, 31, 0.95);
+}
+.dark-mode #requestADiscount .image {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode #requestADiscount .form .input {
+  border-bottom-color: rgba(255, 255, 255, 0.65);
+  background-color: #121212;
+}
+.dark-mode #requestADiscount .form [type=submit] {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #requestADiscount .content h2 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode #requestADiscount .content p {
+  color: rgba(255, 255, 255, 0.65);
+}
+.dark-mode .scrollToTop {
+  color: #121212;
+}
