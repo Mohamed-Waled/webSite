@@ -37,6 +37,7 @@ $darkheadings-color: rgba(255, 255, 255, 0.85);
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: $main-transition;
 }
 
 body {
@@ -213,6 +214,161 @@ ul {
   bottom: 20px;
 }
 
+// Dark Mode Button
+header {
+  .darkModeButton {
+    position: absolute;
+    left: -100px;
+    top: 25px;
+    .checkbox {
+      opacity: 0;
+      position: absolute;
+    }
+    .label {
+      background-color: $darkheadings-color;
+      box-shadow: inset 0 0 10px #ddd;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+      transition: 0.4s;
+      .moon {
+        color: #f1c40f;
+      }
+      .sun {
+        color: #f39c12;
+      }
+      .ball {
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 22px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: 0.4s;
+      }
+    }
+    .checkbox:checked + .label .ball {
+      transform: translateX(24px);
+      background-color: $darksection-background-color-alt;
+    }
+    .checkbox:checked + .label {
+      background-color: $darksection-background-color;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+    }
+  }
+}
+
+header {
+  .darkModeButton-small {
+    position: absolute;
+    top: 250px;
+    .checkbox1 {
+      opacity: 1;
+      position: absolute;
+    }
+    .label1 {
+      background-color: $darkheadings-color;
+      box-shadow: inset 0 0 10px #ddd;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+      transition: 0.4s;
+      .moon {
+        color: #f1c40f;
+      }
+      .sun {
+        color: #f39c12;
+      }
+      .ball1 {
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 22px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: 0.4s;
+      }
+    }
+    .checkbox1:checked + .label1 .ball1 {
+      transform: translateX(24px) !important;
+      background-color: $darksection-background-color-alt;
+    }
+    .checkbox1:checked + .label1 {
+      background-color: $darksection-background-color;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+    }
+  }
+}
+
+header {
+  .darkModeButton-small-mobile {
+    transform: translateX(50%);
+    margin-top: 5px;
+    .checkbox2 {
+      opacity: 0;
+      position: absolute;
+    }
+    .label2 {
+      background-color: $darkheadings-color;
+      box-shadow: inset 0 0 10px #ddd;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+      transition: 0.4s;
+      .moon {
+        color: #f1c40f;
+      }
+      .sun {
+        color: #f39c12;
+      }
+      .ball2 {
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 22px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: 0.4s;
+      }
+    }
+    .checkbox2:checked + .label2 .ball2 {
+      transform: translateX(24px);
+      background-color: $darksection-background-color-alt;
+    }
+    .checkbox2:checked + .label2 {
+      background-color: $darksection-background-color;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+    }
+  }
+}
+
 // Global Rules End
 //######################################################################
 // Header Start
@@ -332,6 +488,9 @@ header {
             li:hover::before {
               width: 100%;
             }
+          }
+          .darkModeButton-small {
+            display: none;
           }
         }
       }
@@ -464,6 +623,14 @@ header {
         }
       }
     }
+  }
+}
+@media (max-width: 1240px) {
+  .darkModeButton {
+    display: none;
+  }
+  .darkModeButton-small {
+    display: block !important;
   }
 }
 // Header End
@@ -2059,6 +2226,9 @@ header {
           .headLinks {
             color: $darkheadings-color;
           }
+          .headLinks:hover {
+            color: $main-color;
+          }
           .headLinks:after {
             background-color: $darksection-background-color-alt;
           }
@@ -2138,7 +2308,6 @@ header {
     background-color: $darksection-background-color;
     z-index: unset;
   }
-
   @media (max-width: 767px) and (min-width: 320px) {
     .landing:before {
       background-color: $darksection-background-color;

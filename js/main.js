@@ -1,3 +1,73 @@
+// Translation Function
+function load() {
+  var translate = new Translate();
+  var currentLng = "en"; //'fr'
+  var attributeName = "data-tag";
+  translate.init(attributeName, currentLng);
+  translate.process();
+}
+
+// On Load
+function onLoad() {
+  load();
+  let data = window.localStorage.getItem("isDark?");
+  let checkBox = document.querySelector(".checkbox");
+  let html = document.querySelector("html");
+  let body = document.querySelector("body");
+
+  window.addEventListener("load", () => {
+    if (data === "true") {
+      html.classList.add("darkMode");
+      body.classList.add("dark-mode");
+      checkBox.checked = true;
+    } else {
+      html.classList.remove("darkMode");
+      body.classList.remove("dark-mode");
+      checkBox.checked = false;
+    }
+  });
+}
+
+// On Load 1
+function onLoad1() {
+  let data = window.localStorage.getItem("isDark?");
+  let checkBox = document.querySelector(".checkbox1");
+  let html = document.querySelector("html");
+  let body = document.querySelector("body");
+
+  window.addEventListener("load", () => {
+    if (data === "true") {
+      html.classList.add("darkMode");
+      body.classList.add("dark-mode");
+      checkBox.checked = true;
+    } else {
+      html.classList.remove("darkMode");
+      body.classList.remove("dark-mode");
+      checkBox.checked = false;
+    }
+  });
+}
+
+// On Load 2
+function onLoad2() {
+  let data = window.localStorage.getItem("isDark?");
+  let checkBox = document.querySelector(".checkbox2");
+  let html = document.querySelector("html");
+  let body = document.querySelector("body");
+
+  window.addEventListener("load", () => {
+    if (data === "true") {
+      html.classList.add("darkMode");
+      body.classList.add("dark-mode");
+      checkBox.checked = true;
+    } else {
+      html.classList.remove("darkMode");
+      body.classList.remove("dark-mode");
+      checkBox.checked = false;
+    }
+  });
+}
+
 // Events Count Down
 function countDown() {
   let countdownDate = new Date("Sept 28, 2023 23:59:59").getTime();
@@ -145,6 +215,7 @@ function dotsOuting() {
   });
 }
 
+// Hide and Show Header
 function hidingShowingHeader() {
   let header = document.querySelector("header");
   let section1 = document.querySelector("#articles");
@@ -167,6 +238,7 @@ function hidingShowingHeader() {
   });
 }
 
+// Other Links Button On Mobile Screens
 function buttonClick() {
   let button = document.querySelector("button");
   let megaMenu = document.querySelector(".megaMenu2");
@@ -180,6 +252,7 @@ function buttonClick() {
   });
 }
 
+// Scroll To Top Button
 function showUpScrollToTopButton() {
   let scrollToTopButton = document.querySelector(".scrollToTop");
 
@@ -198,6 +271,105 @@ function showUpScrollToTopButton() {
   });
 }
 
+// Dark Mode Button
+function darkModeButton() {
+  let checkBox = document.querySelector(".checkbox");
+  let html = document.querySelector("html");
+  let body = document.querySelector("body");
+
+  checkBox.addEventListener("change", () => {
+    if (checkBox.checked) {
+      html.classList.add("darkMode");
+      body.classList.add("dark-mode");
+    } else {
+      html.classList.remove("darkMode");
+      body.classList.remove("dark-mode");
+    }
+  });
+}
+
+// Dark Mode Button 1
+function darkModeButton1() {
+  let checkBox = document.querySelector(".checkbox1");
+  let html = document.querySelector("html");
+  let body = document.querySelector("body");
+
+  checkBox.addEventListener("change", () => {
+    if (checkBox.checked) {
+      html.classList.add("darkMode");
+      body.classList.add("dark-mode");
+    } else {
+      html.classList.remove("darkMode");
+      body.classList.remove("dark-mode");
+    }
+  });
+}
+
+// Dark Mode Button 2
+function darkModeButton2() {
+  let checkBox = document.querySelector(".checkbox2");
+  let html = document.querySelector("html");
+  let body = document.querySelector("body");
+
+  checkBox.addEventListener("change", () => {
+    if (checkBox.checked) {
+      html.classList.add("darkMode");
+      body.classList.add("dark-mode");
+    } else {
+      html.classList.remove("darkMode");
+      body.classList.remove("dark-mode");
+    }
+  });
+}
+
+// Is Dark Mode?
+function addtoLocalStorage() {
+  let checkBox = document.querySelector(".checkbox");
+  let dark = false;
+
+  checkBox.addEventListener("change", () => {
+    if (checkBox.checked) {
+      dark = true;
+      window.localStorage.setItem("isDark?", dark);
+    } else {
+      dark = false;
+      window.localStorage.setItem("isDark?", dark);
+    }
+  });
+}
+
+// Is Dark Mode 1?
+function addtoLocalStorage1() {
+  let checkBox = document.querySelector(".checkbox1");
+  let dark = false;
+
+  checkBox.addEventListener("change", () => {
+    if (checkBox.checked) {
+      dark = true;
+      window.localStorage.setItem("isDark?", dark);
+    } else {
+      dark = false;
+      window.localStorage.setItem("isDark?", dark);
+    }
+  });
+}
+
+// Is Dark Mode 2?
+function addtoLocalStorage2() {
+  let checkBox = document.querySelector(".checkbox2");
+  let dark = false;
+
+  checkBox.addEventListener("change", () => {
+    if (checkBox.checked) {
+      dark = true;
+      window.localStorage.setItem("isDark?", dark);
+    } else {
+      dark = false;
+      window.localStorage.setItem("isDark?", dark);
+    }
+  });
+}
+
 countDown();
 skillsWidth();
 statsCount();
@@ -206,3 +378,12 @@ dotsOuting();
 hidingShowingHeader();
 buttonClick();
 showUpScrollToTopButton();
+darkModeButton();
+darkModeButton1();
+darkModeButton2();
+addtoLocalStorage();
+addtoLocalStorage1();
+addtoLocalStorage2();
+onLoad();
+onLoad1();
+onLoad2();

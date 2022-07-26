@@ -13,22 +13,21 @@
     <!--Link Normalize-->
 
     <script src="js/translate.js"></script>
-    <script>
-      function load() {
-        var translate = new Translate();
-        var currentLng = "en"; //'fr'
-        var attributeName = "data-tag";
-        translate.init(attributeName, currentLng);
-        translate.process();
-      }
-    </script>
 
     <title>Website Title</title>
   </head>
-  <body onload="load()">
+  <body>
     <main>
       <!--Start Header-->
       <header>
+        <div class="darkModeButton">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <i class="fas fa-moon moon"></i>
+            <i class="fas fa-sun sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
         <div class="container">
           <a
             class="logo"
@@ -48,6 +47,14 @@
             <li class="megaMenu-button">
               <a href="" class="headLinks" data-tag="other links"></a>
               <div class="megaMenu">
+                <div class="darkModeButton-small">
+                  <input type="checkbox" class="checkbox1" id="chk1" />
+                  <label class="label1" for="chk1">
+                    <i class="fas fa-moon moon"></i>
+                    <i class="fas fa-sun sun"></i>
+                    <div class="ball1"></div>
+                  </label>
+                </div>
                 <div class="imageMenu">
                   <img src="images/megamenu.png" alt="mega-menu" />
                 </div>
@@ -108,8 +115,16 @@
               </div>
             </li>
             <li class="button">
-              <button data-tag="other links"></button>
+              <button data-tag="other links" class="headLinks"></button>
               <div class="megaMenu2">
+                <div class="darkModeButton-small-mobile">
+                  <input type="checkbox" class="checkbox2" id="chk2" />
+                  <label class="label2" for="chk2">
+                    <i class="fas fa-moon moon"></i>
+                    <i class="fas fa-sun sun"></i>
+                    <div class="ball2"></div>
+                  </label>
+                </div>
                 <ul class="linksMenu">
                   <li>
                     <a href="#testimonials" data-tag="testimonials"
@@ -519,16 +534,16 @@
             <div class="top">
               <img src="images/team-01.jpg" alt="team-01" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>
@@ -542,16 +557,16 @@
             <div class="top">
               <img src="images/team-02.jpg" alt="team-02" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>
@@ -565,16 +580,16 @@
             <div class="top">
               <img src="images/team-03.jpg" alt="team-03" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>
@@ -588,16 +603,16 @@
             <div class="top">
               <img src="images/team-04.jpg" alt="team-04" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>
@@ -611,16 +626,16 @@
             <div class="top">
               <img src="images/team-05.png" alt="team-05" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>
@@ -634,16 +649,16 @@
             <div class="top">
               <img src="images/team-06.png" alt="team-06" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>
@@ -657,16 +672,16 @@
             <div class="top">
               <img src="images/team-07.jpg" alt="team-07" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>
@@ -680,16 +695,16 @@
             <div class="top">
               <img src="images/team-08.jpg" alt="team-08" />
               <div class="iconsTeam">
-                <a href="#">
+                <a href="">
                   <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#">
+                <a href="">
                   <i class="fab fa-youtube"></i>
                 </a>
               </div>

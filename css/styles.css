@@ -5,6 +5,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 body {
@@ -191,6 +193,194 @@ ul {
   bottom: 20px;
 }
 
+header .darkModeButton {
+  position: absolute;
+  left: -100px;
+  top: 25px;
+}
+header .darkModeButton .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+header .darkModeButton .label {
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: inset 0 0 10px #ddd;
+          box-shadow: inset 0 0 10px #ddd;
+  border-radius: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .darkModeButton .label .moon {
+  color: #f1c40f;
+}
+header .darkModeButton .label .sun {
+  color: #f39c12;
+}
+header .darkModeButton .label .ball {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .darkModeButton .checkbox:checked + .label .ball {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+  background-color: #121212;
+}
+header .darkModeButton .checkbox:checked + .label {
+  background-color: #1f1f1f;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header .darkModeButton-small {
+  position: absolute;
+  top: 250px;
+}
+header .darkModeButton-small .checkbox1 {
+  opacity: 1;
+  position: absolute;
+}
+header .darkModeButton-small .label1 {
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: inset 0 0 10px #ddd;
+          box-shadow: inset 0 0 10px #ddd;
+  border-radius: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .darkModeButton-small .label1 .moon {
+  color: #f1c40f;
+}
+header .darkModeButton-small .label1 .sun {
+  color: #f39c12;
+}
+header .darkModeButton-small .label1 .ball1 {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .darkModeButton-small .checkbox1:checked + .label1 .ball1 {
+  -webkit-transform: translateX(24px) !important;
+          transform: translateX(24px) !important;
+  background-color: #121212;
+}
+header .darkModeButton-small .checkbox1:checked + .label1 {
+  background-color: #1f1f1f;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header .darkModeButton-small-mobile {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  margin-top: 5px;
+}
+header .darkModeButton-small-mobile .checkbox2 {
+  opacity: 0;
+  position: absolute;
+}
+header .darkModeButton-small-mobile .label2 {
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: inset 0 0 10px #ddd;
+          box-shadow: inset 0 0 10px #ddd;
+  border-radius: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .darkModeButton-small-mobile .label2 .moon {
+  color: #f1c40f;
+}
+header .darkModeButton-small-mobile .label2 .sun {
+  color: #f39c12;
+}
+header .darkModeButton-small-mobile .label2 .ball2 {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header .darkModeButton-small-mobile .checkbox2:checked + .label2 .ball2 {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+  background-color: #121212;
+}
+header .darkModeButton-small-mobile .checkbox2:checked + .label2 {
+  background-color: #1f1f1f;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 header {
   position: fixed;
   -webkit-box-shadow: 0 0 10px #ddd;
@@ -347,6 +537,9 @@ header .container .mainNav .megaMenu-button .megaMenu .linksMenu li::before {
 header .container .mainNav .megaMenu-button .megaMenu .linksMenu li:hover::before {
   width: 100%;
 }
+header .container .mainNav .megaMenu-button .megaMenu .darkModeButton-small {
+  display: none;
+}
 header .container .mainNav .megaMenu-button:hover .megaMenu {
   opacity: 1;
   z-index: 100;
@@ -475,6 +668,15 @@ header .container .button {
     outline: none;
     background-color: transparent;
     margin-left: 6px;
+  }
+}
+@media (max-width: 1240px) {
+  .darkModeButton {
+    display: none;
+  }
+
+  .darkModeButton-small {
+    display: block !important;
   }
 }
 .landing {
@@ -2379,6 +2581,9 @@ header .container .button {
 }
 .dark-mode header .container .mainNav li .headLinks {
   color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode header .container .mainNav li .headLinks:hover {
+  color: #2196f3;
 }
 .dark-mode header .container .mainNav li .headLinks:after {
   background-color: #121212;
