@@ -253,14 +253,14 @@ function buttonClick() {
   });
 
   exit.addEventListener("click", () => {
-    megaMenu.style.top = `calc(100% - 20px)`;
+    megaMenu.style.top = `-1000px`;
     megaMenu.style.opacity = `0`;
     megaMenu.style.zIndex = `-1`;
   });
 
   goOut.forEach((li) => {
     li.addEventListener("click", () => {
-      megaMenu.style.top = `calc(100% - 20px)`;
+      megaMenu.style.top = `-10000px`;
       megaMenu.style.opacity = `0`;
       megaMenu.style.zIndex = `-1`;
     });

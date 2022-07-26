@@ -516,8 +516,8 @@ header {
     border-bottom: 3px solid $main-color;
     display: flex;
     gap: 40px;
-    // top: -1000%;
-    top: calc(100% + 50px);
+    top: -1000%;
+    // top: calc(100% + 50px);
     opacity: 0;
     z-index: -1;
     transition: top $main-transition, opacity $main-transition;

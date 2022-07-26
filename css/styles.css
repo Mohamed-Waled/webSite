@@ -560,7 +560,7 @@ header .container .button {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
-  top: calc(100% + 50px);
+  top: -1000%;
   opacity: 0;
   z-index: -1;
   -webkit-transition: top 0.4s, opacity 0.4s;
