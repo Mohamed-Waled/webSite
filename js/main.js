@@ -12,6 +12,8 @@ function onLoad() {
   load();
   let data = window.localStorage.getItem("isDark?");
   let checkBox = document.querySelector(".checkbox");
+  let checkBox1 = document.querySelector(".checkbox1");
+  let checkBox2 = document.querySelector(".checkbox2");
   let html = document.querySelector("html");
   let body = document.querySelector("body");
 
@@ -26,44 +28,28 @@ function onLoad() {
       checkBox.checked = false;
     }
   });
-}
-
-// On Load 1
-function onLoad1() {
-  let data = window.localStorage.getItem("isDark?");
-  let checkBox = document.querySelector(".checkbox1");
-  let html = document.querySelector("html");
-  let body = document.querySelector("body");
 
   window.addEventListener("load", () => {
     if (data === "true") {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
-      checkBox.checked = true;
+      checkBox1.checked = true;
     } else {
       html.classList.remove("darkMode");
       body.classList.remove("dark-mode");
-      checkBox.checked = false;
+      checkBox1.checked = false;
     }
   });
-}
-
-// On Load 2
-function onLoad2() {
-  let data = window.localStorage.getItem("isDark?");
-  let checkBox = document.querySelector(".checkbox2");
-  let html = document.querySelector("html");
-  let body = document.querySelector("body");
 
   window.addEventListener("load", () => {
     if (data === "true") {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
-      checkBox.checked = true;
+      checkBox2.checked = true;
     } else {
       html.classList.remove("darkMode");
       body.classList.remove("dark-mode");
-      checkBox.checked = false;
+      checkBox2.checked = false;
     }
   });
 }
@@ -289,6 +275,9 @@ function showUpScrollToTopButton() {
 // Dark Mode Button
 function darkModeButton() {
   let checkBox = document.querySelector(".checkbox");
+  let checkBox1 = document.querySelector(".checkbox1");
+  let checkBox2 = document.querySelector(".checkbox2");
+
   let html = document.querySelector("html");
   let body = document.querySelector("body");
 
@@ -301,16 +290,9 @@ function darkModeButton() {
       body.classList.remove("dark-mode");
     }
   });
-}
 
-// Dark Mode Button 1
-function darkModeButton1() {
-  let checkBox = document.querySelector(".checkbox1");
-  let html = document.querySelector("html");
-  let body = document.querySelector("body");
-
-  checkBox.addEventListener("change", () => {
-    if (checkBox.checked) {
+  checkBox1.addEventListener("change", () => {
+    if (checkBox1.checked) {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
     } else {
@@ -318,16 +300,9 @@ function darkModeButton1() {
       body.classList.remove("dark-mode");
     }
   });
-}
 
-// Dark Mode Button 2
-function darkModeButton2() {
-  let checkBox = document.querySelector(".checkbox2");
-  let html = document.querySelector("html");
-  let body = document.querySelector("body");
-
-  checkBox.addEventListener("change", () => {
-    if (checkBox.checked) {
+  checkBox2.addEventListener("change", () => {
+    if (checkBox2.checked) {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
     } else {
@@ -340,6 +315,9 @@ function darkModeButton2() {
 // Is Dark Mode?
 function addtoLocalStorage() {
   let checkBox = document.querySelector(".checkbox");
+  let checkBox1 = document.querySelector(".checkbox1");
+  let checkBox2 = document.querySelector(".checkbox2");
+
   let dark = false;
 
   checkBox.addEventListener("change", () => {
@@ -351,15 +329,9 @@ function addtoLocalStorage() {
       window.localStorage.setItem("isDark?", dark);
     }
   });
-}
 
-// Is Dark Mode 1?
-function addtoLocalStorage1() {
-  let checkBox = document.querySelector(".checkbox1");
-  let dark = false;
-
-  checkBox.addEventListener("change", () => {
-    if (checkBox.checked) {
+  checkBox1.addEventListener("change", () => {
+    if (checkBox1.checked) {
       dark = true;
       window.localStorage.setItem("isDark?", dark);
     } else {
@@ -367,15 +339,9 @@ function addtoLocalStorage1() {
       window.localStorage.setItem("isDark?", dark);
     }
   });
-}
 
-// Is Dark Mode 2?
-function addtoLocalStorage2() {
-  let checkBox = document.querySelector(".checkbox2");
-  let dark = false;
-
-  checkBox.addEventListener("change", () => {
-    if (checkBox.checked) {
+  checkBox2.addEventListener("change", () => {
+    if (checkBox2.checked) {
       dark = true;
       window.localStorage.setItem("isDark?", dark);
     } else {
@@ -394,11 +360,5 @@ hidingShowingHeader();
 buttonClick();
 showUpScrollToTopButton();
 darkModeButton();
-darkModeButton1();
-darkModeButton2();
 addtoLocalStorage();
-addtoLocalStorage1();
-addtoLocalStorage2();
 onLoad();
-onLoad1();
-onLoad2();
