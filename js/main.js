@@ -1,15 +1,5 @@
-// Translation Function
-function load() {
-  var translate = new Translate();
-  var currentLng = "en"; //'fr'
-  var attributeName = "data-tag";
-  translate.init(attributeName, currentLng);
-  translate.process();
-}
-
 // On Load
 function onLoad() {
-  load();
   let data = window.localStorage.getItem("isDark?");
   let checkBox = document.querySelector(".checkbox");
   let checkBox1 = document.querySelector(".checkbox1");
@@ -351,6 +341,31 @@ function addtoLocalStorage() {
   });
 }
 
+function translate() {
+  let lang = "en";
+  let allDom = document.querySelectorAll("*");
+
+  fetch(`../languages/${lang}.json`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((jsondata) => {
+      for (const key in jsondata) {
+        allDom.forEach((element) => {
+          for (const attr of element.attributes) {
+            if (element.hasAttribute("data-tag")) {
+              if (attr.name === "data-tag") {
+                if (attr.value === key) {
+                  element.innerHTML += jsondata[key];
+                }
+              }
+            }
+          }
+        });
+      }
+    });
+}
+
 countDown();
 skillsWidth();
 statsCount();
@@ -362,3 +377,4 @@ showUpScrollToTopButton();
 darkModeButton();
 addtoLocalStorage();
 onLoad();
+translate();
