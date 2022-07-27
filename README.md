@@ -120,6 +120,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - Update 2: I've Used The Function Provided in The Website Mentioned Above but I Understand Just 10% of it But I Working on it.
   - Update 3: I've Made The English JSON File and it Worked Right.
   - Update 4: Mr.[Mohamed Abdallah](https://www.linkedin.com/in/mohamed-abdallah-a94158222/) is a Great Translator and He is Working on The Arabic JSON File Right Now.
+  - Update 5: I've Searched Again and I've Found Another Way With The Same Idea to Add Another Laguage to The Website and I Understood it Perfectly I Will Discuss it in [This Repo]() Check it Out.
 - Upgrade it by Adding Dark Mode.
   - Update 1: I've Choosed The Colors of The Dark Mode.
   - Update 2: I've Searched Till I found a Cool Button For The Dark Mode.
