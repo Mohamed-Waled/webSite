@@ -6,6 +6,8 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 - [Overview](#overview)
   - [Screenshot](#screenshot)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
   - [Links](#links)
 - [My process](#my-process)
   - [Updates](#updates)
@@ -20,8 +22,19 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 ### Screenshot
 
-![](images/desktopScreenShot.png)
-![](images/mobileScreenShot.png)
+#### Desktop
+
+##### English Language
+
+![](images/Desktop%20Light%20EN.png)
+![](images/Desktop%20Dark%20EN.png)
+
+#### Mobile
+
+##### English Language
+
+![](images/Mobile%20Light%20EN.png)
+![](images/Mobile%20Dark%20EN.png)
 
 ### Links
 
