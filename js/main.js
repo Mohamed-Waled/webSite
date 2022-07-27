@@ -345,7 +345,7 @@ function translate() {
   let lang = "en";
   let allDom = document.querySelectorAll("*");
 
-  fetch(`../resources/${lang}.json`)
+  fetch(`https://raw.githubusercontent.com/Mohamed-Waled/webSite/main/resources/${lang}.json`)
     .then((response) => {
       return response.json();
     })
