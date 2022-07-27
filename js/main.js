@@ -345,7 +345,7 @@ function translate() {
   let lang = "en";
   let allDom = document.querySelectorAll("*");
 
-  fetch(`../languages/${lang}.json`)
+  fetch(`../resources/${lang}.json`)
     .then((response) => {
       return response.json();
     })
