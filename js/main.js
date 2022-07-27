@@ -1,6 +1,6 @@
 // On Load
 function onLoad() {
-  let data = window.localStorage.getItem("isDark?");
+  let isDark = window.localStorage.getItem("isDark?");
   let checkBox = document.querySelector(".checkbox");
   let checkBox1 = document.querySelector(".checkbox1");
   let checkBox2 = document.querySelector(".checkbox2");
@@ -8,7 +8,7 @@ function onLoad() {
   let body = document.querySelector("body");
 
   window.addEventListener("load", () => {
-    if (data === "true") {
+    if (isDark === "true") {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
       checkBox.checked = true;
@@ -20,7 +20,7 @@ function onLoad() {
   });
 
   window.addEventListener("load", () => {
-    if (data === "true") {
+    if (isDark === "true") {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
       checkBox1.checked = true;
@@ -32,7 +32,7 @@ function onLoad() {
   });
 
   window.addEventListener("load", () => {
-    if (data === "true") {
+    if (isDark === "true") {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
       checkBox2.checked = true;
@@ -218,7 +218,6 @@ function hidingShowingHeader() {
 function buttonClick() {
   let button = document.querySelector("button");
   let megaMenu = document.querySelector(".megaMenu2");
-  let megaMenu2 = document.querySelector(".megaMenu");
   let exit = document.querySelector(".up");
   let goOut = document.querySelectorAll(".linksMenu li");
 
@@ -355,8 +354,8 @@ function translate() {
       for (const key in jsondata) {
         allDom.forEach((element) => {
           for (const attr of element.attributes) {
-            if (element.hasAttribute("data-tag")) {
-              if (attr.name === "data-tag") {
+            if (element.hasAttribute("data-lang")) {
+              if (attr.name === "data-lang") {
                 if (attr.value === key) {
                   element.innerHTML += jsondata[key];
                 }

@@ -37,7 +37,7 @@ $darkheadings-color: rgba(255, 255, 255, 0.85);
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  transition: $main-transition;
+  transition: background-color $main-transition;
 }
 
 body {
