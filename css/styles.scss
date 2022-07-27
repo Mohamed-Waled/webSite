@@ -440,16 +440,16 @@ header {
         .megaMenu {
           position: absolute;
           width: 100%;
-          left: -1400px !important;
+          left: -1400px;
           padding: 30px;
           background-color: $white-color;
           border-bottom: 3px solid $main-color;
-          z-index: -1 !important;
+          z-index: -1;
           display: flex;
           gap: 40px;
           top: 100%;
           // top: -1000%;
-          opacity: 0 !important;
+          opacity: 0;
           transition: left $main-transition, opacity $main-transition;
           .imageMenu img {
             max-width: 100%;
@@ -495,10 +495,10 @@ header {
         }
       }
       .megaMenu-button:hover .megaMenu {
-        opacity: 1 !important;
-        z-index: 100 !important;
+        opacity: 1;
+        z-index: 100;
         // top: 100%;
-        left: 0 !important;
+        left: 0;
       }
     }
     .button {
@@ -799,13 +799,22 @@ header {
         padding: 20px;
         border-top: 1px solid #e6e6e7;
         @include flexBox(space-between, center);
+        position: relative;
         a {
           color: $main-color;
           font-weight: bold;
           text-transform: capitalize;
         }
-        .icon {
+        a::before {
+          font-family: "Font Awesome 6 Free";
+          content: "\f30b";
+          font-weight: 900;
           color: $main-color;
+          display: block;
+          width: fit-content;
+          height: fit-content;
+          position: absolute;
+          right: 20px;
         }
       }
     }
@@ -813,7 +822,7 @@ header {
       transform: translateY(-10px);
       box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
     }
-    .box:hover .cardFooter .icon {
+    .box:hover a::before {
       animation: moving-arrow 0.6s linear infinite;
     }
   }
@@ -1417,7 +1426,6 @@ header {
 // Latest Events Start
 #latestEvents {
   overflow: hidden;
-
   position: relative;
   padding: $main-padding;
   .container {
@@ -2176,6 +2184,11 @@ header {
     transform: translateX(10px);
   }
 }
+@keyframes moving-arrow-left {
+  100% {
+    transform: translateX(-10px);
+  }
+}
 @keyframes flashing {
   0%,
   40% {
@@ -2657,5 +2670,219 @@ header {
 // Dark Mode End
 //######################################################################
 // RTL Styles Start
-
+.rtl {
+  overflow-x: hidden;
+  .scrollToTop {
+    right: unset;
+    left: 20px;
+  }
+  header {
+    .darkModeButton {
+      left: unset;
+      right: -100px;
+      .label {
+        flex-direction: row-reverse;
+      }
+    }
+    .darkModeButton-small {
+      .label1 {
+        flex-direction: row-reverse;
+      }
+    }
+    .darkModeButton-small-mobile {
+      transform: translateX(-50%);
+      .label2 {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  header {
+    .container {
+      .mainNav {
+        .megaMenu-button {
+          .megaMenu {
+            left: unset;
+            right: -1400px;
+            transition: right $main-transition;
+            .linksMenu {
+              li {
+                a {
+                  i {
+                    margin-right: 0;
+                    margin-left: 10px;
+                  }
+                }
+              }
+              li::before {
+                left: unset;
+                right: 0;
+              }
+            }
+          }
+        }
+        .megaMenu-button:hover .megaMenu {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+  }
+  .landing {
+    .container {
+      .text {
+        text-align: right;
+      }
+    }
+  }
+  .landing:before {
+    transform: skewY(6deg);
+    transform-origin: top right;
+  }
+  @media (max-width: 767px) and (min-width: 320px) {
+    .landing:before {
+      transform: skewY(6deg);
+      transform-origin: top right;
+    }
+  }
+  #articles {
+    .container {
+      .box {
+        .cardFooter {
+          a::before {
+            content: "\f30a";
+            right: unset;
+            left: 20px;
+          }
+        }
+      }
+      .box:hover a::before {
+        animation: moving-arrow-left 0.6s linear infinite;
+      }
+    }
+  }
+  #testimonials {
+    .container {
+      .box {
+        .headerTest {
+          .photoTest {
+            img {
+              right: unset;
+              left: -30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #teamMembers {
+    .container {
+      .card {
+        .bottom {
+          padding-left: unset;
+          padding-right: 80px;
+        }
+      }
+      .card::before,
+      .card::after {
+        right: unset;
+        left: 0;
+      }
+      .card::after {
+        left: unset;
+        right: 60px;
+      }
+    }
+  }
+  #ourSkills {
+    .container {
+      .skills {
+        .skill {
+          .the-progress {
+            span {
+              left: unset;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  #howItWorks {
+    .container {
+      .worksPhoto {
+        margin-right: unset;
+        margin-left: 100px;
+      }
+      .steps {
+        .worksBox {
+          img {
+            margin-right: unset;
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+  #latestEvents {
+    .container {
+      .eventsTime {
+        .time {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+  #pricingPlans {
+    .container {
+      .boxPricing {
+        ul {
+          text-align: right;
+          li {
+            padding-right: 40px;
+            position: relative;
+          }
+          li::before {
+            position: absolute;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .container {
+      .box {
+        .social {
+          li {
+            margin-left: 10px;
+            margin-right: unset;
+          }
+        }
+        .links {
+          li {
+            position: relative;
+            padding-right: 30px;
+          }
+          li:hover {
+            padding-left: unset ;
+            padding-right: 50px ;
+          }
+          li a::before {
+            position: absolute;
+            content: "\F100";
+            margin-right: unset;
+            margin-left: 10px;
+            right: 5px;
+          }
+        }
+        .line {
+          .icon {
+            margin-right: unset;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
 // RTL Styles END

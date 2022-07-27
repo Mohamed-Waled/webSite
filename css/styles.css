@@ -482,17 +482,17 @@ header .container .mainNav li .headLinks:hover:before {
 header .container .mainNav .megaMenu-button .megaMenu {
   position: absolute;
   width: 100%;
-  left: -1400px !important;
+  left: -1400px;
   padding: 30px;
   background-color: white;
   border-bottom: 3px solid #2196f3;
-  z-index: -1 !important;
+  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
   top: 100%;
-  opacity: 0 !important;
+  opacity: 0;
   -webkit-transition: left 0.4s, opacity 0.4s;
   transition: left 0.4s, opacity 0.4s;
 }
@@ -541,9 +541,9 @@ header .container .mainNav .megaMenu-button .megaMenu .darkModeButton-small {
   display: none;
 }
 header .container .mainNav .megaMenu-button:hover .megaMenu {
-  opacity: 1 !important;
-  z-index: 100 !important;
-  left: 0 !important;
+  opacity: 1;
+  z-index: 100;
+  left: 0;
 }
 header .container .button {
   display: none;
@@ -903,14 +903,27 @@ header .container .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 #articles .container .box .cardFooter a {
   color: #2196f3;
   font-weight: bold;
   text-transform: capitalize;
 }
-#articles .container .box .cardFooter .icon {
+#articles .container .box .cardFooter a::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f30b";
+  font-weight: 900;
   color: #2196f3;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 20px;
 }
 #articles .container .box:hover {
   -webkit-transform: translateY(-10px);
@@ -918,7 +931,7 @@ header .container .button {
   -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
-#articles .container .box:hover .cardFooter .icon {
+#articles .container .box:hover a::before {
   -webkit-animation: moving-arrow 0.6s linear infinite;
           animation: moving-arrow 0.6s linear infinite;
 }
@@ -2536,6 +2549,18 @@ header .container .button {
             transform: translateX(10px);
   }
 }
+@-webkit-keyframes moving-arrow-left {
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
+@keyframes moving-arrow-left {
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
 @-webkit-keyframes flashing {
   0%, 40% {
     opacity: 1;
@@ -2903,4 +2928,151 @@ header .container .button {
 }
 .dark-mode .scrollToTop {
   color: #121212;
+}
+
+.rtl {
+  overflow-x: hidden;
+}
+.rtl .scrollToTop {
+  right: unset;
+  left: 20px;
+}
+.rtl header .darkModeButton {
+  left: unset;
+  right: -100px;
+}
+.rtl header .darkModeButton .label {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.rtl header .darkModeButton-small .label1 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.rtl header .darkModeButton-small-mobile {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.rtl header .darkModeButton-small-mobile .label2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.rtl header .container .mainNav .megaMenu-button .megaMenu {
+  left: unset;
+  right: -1400px;
+  -webkit-transition: right 0.4s;
+  transition: right 0.4s;
+}
+.rtl header .container .mainNav .megaMenu-button .megaMenu .linksMenu li a i {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.rtl header .container .mainNav .megaMenu-button .megaMenu .linksMenu li::before {
+  left: unset;
+  right: 0;
+}
+.rtl header .container .mainNav .megaMenu-button:hover .megaMenu {
+  left: unset;
+  right: 0;
+}
+.rtl .landing .container .text {
+  text-align: right;
+}
+.rtl .landing:before {
+  -webkit-transform: skewY(6deg);
+          transform: skewY(6deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+@media (max-width: 767px) and (min-width: 320px) {
+  .rtl .landing:before {
+    -webkit-transform: skewY(6deg);
+            transform: skewY(6deg);
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+  }
+}
+.rtl #articles .container .box .cardFooter a::before {
+  content: "\f30a";
+  right: unset;
+  left: 20px;
+}
+.rtl #articles .container .box:hover a::before {
+  -webkit-animation: moving-arrow-left 0.6s linear infinite;
+          animation: moving-arrow-left 0.6s linear infinite;
+}
+.rtl #testimonials .container .box .headerTest .photoTest img {
+  right: unset;
+  left: -30px;
+}
+.rtl #teamMembers .container .card .bottom {
+  padding-left: unset;
+  padding-right: 80px;
+}
+.rtl #teamMembers .container .card::before,
+.rtl #teamMembers .container .card::after {
+  right: unset;
+  left: 0;
+}
+.rtl #teamMembers .container .card::after {
+  left: unset;
+  right: 60px;
+}
+.rtl #ourSkills .container .skills .skill .the-progress span {
+  left: unset;
+  right: 0;
+}
+.rtl #howItWorks .container .worksPhoto {
+  margin-right: unset;
+  margin-left: 100px;
+}
+.rtl #howItWorks .container .steps .worksBox img {
+  margin-right: unset;
+  margin-left: 30px;
+}
+.rtl #latestEvents .container .eventsTime .time {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.rtl #pricingPlans .container .boxPricing ul {
+  text-align: right;
+}
+.rtl #pricingPlans .container .boxPricing ul li {
+  padding-right: 40px;
+  position: relative;
+}
+.rtl #pricingPlans .container .boxPricing ul li::before {
+  position: absolute;
+  right: 10px;
+}
+.rtl .footer .container .box .social li {
+  margin-left: 10px;
+  margin-right: unset;
+}
+.rtl .footer .container .box .links li {
+  position: relative;
+  padding-right: 30px;
+}
+.rtl .footer .container .box .links li:hover {
+  padding-left: unset;
+  padding-right: 50px;
+}
+.rtl .footer .container .box .links li a::before {
+  position: absolute;
+  content: "\f100";
+  margin-right: unset;
+  margin-left: 10px;
+  right: 5px;
+}
+.rtl .footer .container .box .line .icon {
+  margin-right: unset;
+  margin-left: 10px;
 }
