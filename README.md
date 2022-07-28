@@ -147,6 +147,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - Update 5: I've Searched Again and I've Found Another Way With The Same Idea to Add Another Laguage to The Website and I Understood it Perfectly I Will Discuss it in [This Repo]() Check it Out.
   - Update 6: I've Made The RTL Styles.
   - Update 7: I've Made The Change Languages Button.
+  - Update 8: I've Uploaded The Arabic File Thanks to Mr.[Mohamed Abdallah](https://www.linkedin.com/in/mohamed-abdallah-a94158222/) and it works perfectly check it out.
 - Upgrade it by Adding Dark Mode.
   - Update 1: I've Choosed The Colors of The Dark Mode.
   - Update 2: I've Searched Till I found a Cool Button For The Dark Mode.
