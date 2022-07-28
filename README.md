@@ -17,6 +17,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - [Built with](#built-with)
   - [Planing To](#planing-to)
 - [Author](#author)
+- [Contributes](#contributes)
 
 ## Overview
 
@@ -158,3 +159,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 - Frontend Mentor - [@Mohamed-Waled](https://www.frontendmentor.io/profile/Mohamed-Waled)
 - Linkedin - [@mohamed-waled](https://www.linkedin.com/in/mohamed-waled-82a51a1bb/)
 - Leet Code - [@MohamedWaled](https://leetcode.com/MohamedWaled/)
+
+## Contributes
+
+- English Arabic, Arabic English Translator - Mr.[@Mohamed Abdallah](https://www.linkedin.com/in/mohamed-abdallah-a94158222/)
