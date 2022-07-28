@@ -32,6 +32,15 @@ function onLoadLanguages() {
   let checkBoxlang2 = document.querySelector(".checkboxlang2");
   let body = document.querySelector("body");
 
+  let email = document.querySelector(".email1");
+  let subscribe = document.querySelector(".subscribee");
+  let name = document.querySelector(".namee");
+  let email1 = document.querySelector(".emaill");
+  let mobile = document.querySelector(".mobilee");
+  let message = document.querySelector(".messagee");
+  let submit = document.querySelector(".sendd");
+  let copyright = document.querySelector(".copyright");
+
   window.addEventListener("load", () => {
     if (isArabic === "true") {
       body.classList.add("rtl");
@@ -39,6 +48,18 @@ function onLoadLanguages() {
       checkBoxlang.checked = true;
       checkBoxlang1.checked = true;
       checkBoxlang2.checked = true;
+      email.setAttribute("placeholder", "ادخل بريدك الإلكترونى");
+      subscribe.setAttribute("value", "اشترك");
+      submit.setAttribute("value", "ارسل");
+      name.setAttribute("placeholder", "ادخل أسمك");
+      email1.setAttribute("placeholder", "ادخل بريدك الالكترونى");
+      mobile.setAttribute("placeholder", "ادخل رقم هاتفك");
+      message.setAttribute("placeholder", "ادخل رسالتك");
+      copyright.innerHTML = `تمت برمجتها بكل ال ❤ بواسطة
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >م : محمد وليد</a
+      >.`;
+
       translate("ar");
     } else {
       body.classList.remove("rtl");
