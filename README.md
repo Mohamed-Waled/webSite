@@ -29,12 +29,22 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 ![](images/Desktop%20Light%20EN.png)
 ![](images/Desktop%20Dark%20EN.png)
 
+##### Arabic Language
+
+![](images/Desktop%20Light%20AR.png)
+![](images/Desktop%20Dark%20AR.png)
+
 #### Mobile
 
 ##### English Language
 
 ![](images/Mobile%20Light%20EN.png)
 ![](images/Mobile%20Dark%20EN.png)
+
+##### English Language
+
+![](images/Mobile%20Light%20AR.png)
+![](images/Mobile%20Dark%20AR.png)
 
 ### Links
 
