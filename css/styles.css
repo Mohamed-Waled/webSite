@@ -3185,6 +3185,10 @@ header .container .button {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
+.rtl header .laguagesButton-small {
+  position: absolute;
+  left: 620px;
+}
 .rtl header .laguagesButton-small .labellang1 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
