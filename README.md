@@ -128,6 +128,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - Update 5: I've Made a Function That Makes The Header Hidden When You Scroll Down and it Will Show itself Again When You Scroll Up.
   - Update 6: I've Added a Scroll To Top Button.
   - Update 7: I've Added Dark Mode Buttons.
+  - UPdate 8: I've Added Change Languages Button.
 - Upgrade it by Adding Another Language.
   - Update 1: I Searched About it and Found This Website That Helped Me [How to Create a Multilingual Application using JavaScript](https://www.codeproject.com/Tips/1165561/How-to-Create-a-Multilingual-Application-using-Jav).
   - Update 2: I've Used The Function Provided in The Website Mentioned Above but I Understand Just 10% of it But I Working on it.
@@ -135,6 +136,7 @@ This is a template made for purpose of training similar to [Elzero Web School Th
   - Update 4: Mr.[Mohamed Abdallah](https://www.linkedin.com/in/mohamed-abdallah-a94158222/) is a Great Translator and He is Working on The Arabic JSON File Right Now.
   - Update 5: I've Searched Again and I've Found Another Way With The Same Idea to Add Another Laguage to The Website and I Understood it Perfectly I Will Discuss it in [This Repo]() Check it Out.
   - Update 6: I've Made The RTL Styles.
+  - Update 7: I've Made The Change Languages Button.
 - Upgrade it by Adding Dark Mode.
   - Update 1: I've Choosed The Colors of The Dark Mode.
   - Update 2: I've Searched Till I found a Cool Button For The Dark Mode.
