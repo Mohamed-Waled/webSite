@@ -272,7 +272,7 @@ header {
     position: absolute;
     top: 250px;
     .checkbox1 {
-      opacity: 1;
+      opacity: 0;
       position: absolute;
     }
     .label1 {
@@ -320,7 +320,7 @@ header {
 
 header {
   .darkModeButton-small-mobile {
-    transform: translateX(50%);
+    transform: translateX(25%);
     margin-top: 5px;
     .checkbox2 {
       opacity: 0;
@@ -365,6 +365,161 @@ header {
     .checkbox2:checked + .label2 {
       background-color: $darksection-background-color;
       box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+    }
+  }
+}
+
+// Changing Languages Button
+header {
+  .laguagesButton {
+    position: absolute;
+    right: -100px;
+    top: 25px;
+    .checkboxlang {
+      opacity: 0;
+      position: absolute;
+    }
+    .labellang {
+      background-color: $darkheadings-color;
+      box-shadow: inset 0 0 10px #ddd;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+      transition: 0.4s;
+      .egFlag {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+      }
+      .gbFlag {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+      }
+      .balllang {
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 22px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: 0.4s;
+      }
+    }
+    .checkboxlang:checked + .labellang .balllang {
+      transform: translateX(24px);
+    }
+  }
+}
+
+header {
+  .laguagesButton-small {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    .checkboxlang1 {
+      opacity: 0;
+      position: absolute;
+    }
+    .labellang1 {
+      background-color: $darkheadings-color;
+      box-shadow: inset 0 0 10px #ddd;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+      transition: 0.4s;
+      .egFlag {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+      }
+      .gbFlag {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+      }
+      .balllang1 {
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 22px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: 0.4s;
+      }
+    }
+    .checkboxlang1:checked + .labellang1 .balllang1 {
+      transform: translateX(24px);
+    }
+  }
+}
+
+header {
+  .laguagesButton-small-mobile {
+    transform: translateX(-50%);
+    position: absolute;
+    left: 70%;
+    margin-top: 5px;
+    .checkboxlang2 {
+      opacity: 0;
+      position: absolute;
+    }
+    .labellang2 {
+      background-color: $darkheadings-color;
+      box-shadow: inset 0 0 10px #ddd;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+      transition: 0.4s;
+      .egFlag {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+      }
+      .gbFlag {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+      }
+      .balllang2 {
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 22px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: 0.4s;
+      }
+    }
+    .checkboxlang2:checked + .labellang2 .balllang2 {
+      transform: translateX(24px);
     }
   }
 }
@@ -490,6 +645,9 @@ header {
             }
           }
           .darkModeButton-small {
+            display: none;
+          }
+          .laguagesButton-small {
             display: none;
           }
         }
@@ -641,6 +799,12 @@ header {
     display: none;
   }
   .darkModeButton-small {
+    display: block !important;
+  }
+  .laguagesButton {
+    display: none;
+  }
+  .laguagesButton-small {
     display: block !important;
   }
 }
@@ -2244,6 +2408,33 @@ header {
   header {
     box-shadow: 0 0 10px $darksection-background-color;
     background-color: $darksection-background-color;
+    .laguagesButton {
+      .labellang {
+        background-color: $darksection-background-color;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+      }
+      .balllang {
+        background-color: $darksection-background-color-alt;
+      }
+    }
+    .laguagesButton-small {
+      .labellang1 {
+        background-color: $darksection-background-color;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+      }
+      .balllang1 {
+        background-color: $darksection-background-color-alt;
+      }
+    }
+    .laguagesButton-small-mobile {
+      .labellang2 {
+        background-color: $darksection-background-color;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+      }
+      .balllang2 {
+        background-color: $darksection-background-color-alt;
+      }
+    }
     .container {
       .mainNav {
         li {
@@ -2864,8 +3055,8 @@ header {
             padding-right: 30px;
           }
           li:hover {
-            padding-left: unset ;
-            padding-right: 50px ;
+            padding-left: unset;
+            padding-right: 50px;
           }
           li a::before {
             position: absolute;
