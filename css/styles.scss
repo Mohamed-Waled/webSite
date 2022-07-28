@@ -524,6 +524,26 @@ header {
   }
 }
 
+@media (min-width: 767px) and (max-width: 991px) {
+  header {
+    .laguagesButton-small-mobile {
+      position: absolute;
+      left: 65px;
+      top: 90px;
+    }
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1024px) {
+  header {
+    .laguagesButton-small {
+      position: absolute;
+      left: 30px;
+      top: 200px;
+    }
+  }
+}
+
 // Global Rules End
 //######################################################################
 // Header Start
@@ -2902,6 +2922,15 @@ header {
       transform: translateX(-50%);
       .labellang2 {
         flex-direction: row-reverse;
+      }
+    }
+  }
+  @media (min-width: 767px) and (max-width: 991px) {
+    header {
+      .laguagesButton-small-mobile {
+        position: absolute;
+        right: -575px;
+        top: 90px;
       }
     }
   }

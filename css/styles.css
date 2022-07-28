@@ -566,6 +566,20 @@ header .laguagesButton-small-mobile .checkboxlang2:checked + .labellang2 .ballla
           transform: translateX(24px);
 }
 
+@media (min-width: 767px) and (max-width: 991px) {
+  header .laguagesButton-small-mobile {
+    position: absolute;
+    left: 65px;
+    top: 90px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1024px) {
+  header .laguagesButton-small {
+    position: absolute;
+    left: 30px;
+    top: 200px;
+  }
+}
 header {
   position: fixed;
   -webkit-box-shadow: 0 0 10px #ddd;
@@ -3204,6 +3218,13 @@ header .container .button {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .rtl header .laguagesButton-small-mobile {
+    position: absolute;
+    right: -575px;
+    top: 90px;
+  }
 }
 .rtl header .container .mainNav .megaMenu-button .megaMenu {
   left: unset;
