@@ -162,4 +162,4 @@ This is a template made for purpose of training similar to [Elzero Web School Th
 
 ## Contributes
 
-- English Arabic, Arabic English Translator - Mr.[@Mohamed Abdallah](https://www.linkedin.com/in/mohamed-abdallah-a94158222/)
+- English Arabic, Arabic English Translator - Mr.[Mohamed Abdallah](https://www.linkedin.com/in/mohamed-abdallah-a94158222/)
