@@ -3157,10 +3157,6 @@ header .container .button {
   right: unset;
   left: 20px;
 }
-.rtl header .darkModeButton {
-  left: unset;
-  right: -100px;
-}
 .rtl header .darkModeButton .label {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -3178,6 +3174,28 @@ header .container .button {
           transform: translateX(-50%);
 }
 .rtl header .darkModeButton-small-mobile .label2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.rtl header .laguagesButton .labellang {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.rtl header .laguagesButton-small .labellang1 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.rtl header .laguagesButton-small-mobile {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.rtl header .laguagesButton-small-mobile .labellang2 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;

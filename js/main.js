@@ -12,34 +12,41 @@ function onLoad() {
       html.classList.add("darkMode");
       body.classList.add("dark-mode");
       checkBox.checked = true;
-    } else {
-      html.classList.remove("darkMode");
-      body.classList.remove("dark-mode");
-      checkBox.checked = false;
-    }
-  });
-
-  window.addEventListener("load", () => {
-    if (isDark === "true") {
-      html.classList.add("darkMode");
-      body.classList.add("dark-mode");
       checkBox1.checked = true;
-    } else {
-      html.classList.remove("darkMode");
-      body.classList.remove("dark-mode");
-      checkBox1.checked = false;
-    }
-  });
-
-  window.addEventListener("load", () => {
-    if (isDark === "true") {
-      html.classList.add("darkMode");
-      body.classList.add("dark-mode");
       checkBox2.checked = true;
     } else {
       html.classList.remove("darkMode");
       body.classList.remove("dark-mode");
+      checkBox.checked = false;
+      checkBox1.checked = false;
       checkBox2.checked = false;
+    }
+  });
+}
+
+// On Load Languages
+function onLoadLanguages() {
+  let isArabic = window.localStorage.getItem("isArabic?");
+  let checkBoxlang = document.querySelector(".checkboxlang");
+  let checkBoxlang1 = document.querySelector(".checkboxlang1");
+  let checkBoxlang2 = document.querySelector(".checkboxlang2");
+  let body = document.querySelector("body");
+
+  window.addEventListener("load", () => {
+    if (isArabic === "true") {
+      body.classList.add("rtl");
+      body.setAttribute("dir", "rtl");
+      checkBoxlang.checked = true;
+      checkBoxlang1.checked = true;
+      checkBoxlang2.checked = true;
+      translate("ar");
+    } else {
+      body.classList.remove("rtl");
+      body.removeAttribute("dir", "rtl");
+      checkBoxlang.checked = false;
+      checkBoxlang1.checked = false;
+      checkBoxlang2.checked = false;
+      translate("en");
     }
   });
 }
@@ -340,8 +347,8 @@ function addtoLocalStorage() {
   });
 }
 
-function translate() {
-  let lang = "en";
+function translate(language) {
+  let lang = language;
   let allDom = document.querySelectorAll("*");
 
   fetch(
@@ -367,6 +374,96 @@ function translate() {
     });
 }
 
+//Change Languages Button
+function changeLanguagesButton() {
+  let checkBoxlang = document.querySelector(".checkboxlang");
+  let checkBoxlang1 = document.querySelector(".checkboxlang1");
+  let checkBoxlang2 = document.querySelector(".checkboxlang2");
+
+  let body = document.querySelector("body");
+
+  checkBoxlang.addEventListener("change", () => {
+    if (checkBoxlang.checked) {
+      body.classList.add("rtl");
+      body.setAttribute("dir", "rtl");
+      window.location.reload();
+      translate("ar");
+    } else {
+      body.classList.remove("rtl");
+      body.removeAttribute("dir", "rtl");
+      window.location.reload();
+      translate("en");
+    }
+  });
+
+  checkBoxlang1.addEventListener("change", () => {
+    if (checkBoxlang1.checked) {
+      body.classList.add("rtl");
+      body.setAttribute("dir", "rtl");
+      window.location.reload();
+      translate("ar");
+    } else {
+      body.classList.remove("rtl");
+      body.removeAttribute("dir", "rtl");
+      window.location.reload();
+      translate("en");
+    }
+  });
+
+  checkBoxlang2.addEventListener("change", () => {
+    if (checkBoxlang2.checked) {
+      body.classList.add("rtl");
+      body.setAttribute("dir", "rtl");
+      window.location.reload();
+      translate("ar");
+    } else {
+      body.classList.remove("rtl");
+      body.removeAttribute("dir", "rtl");
+      window.location.reload();
+      translate("en");
+    }
+  });
+}
+
+// Is Arabic?
+function addLanguagetoLocalStorage() {
+  let checkBoxlang = document.querySelector(".checkboxlang");
+  let checkBoxlang1 = document.querySelector(".checkboxlang1");
+  let checkBoxlang2 = document.querySelector(".checkboxlang2");
+
+  let arabic = false;
+
+  checkBoxlang.addEventListener("change", () => {
+    if (checkBoxlang.checked) {
+      arabic = true;
+      window.localStorage.setItem("isArabic?", arabic);
+    } else {
+      arabic = false;
+      window.localStorage.setItem("isArabic?", arabic);
+    }
+  });
+
+  checkBoxlang1.addEventListener("change", () => {
+    if (checkBoxlang1.checked) {
+      arabic = true;
+      window.localStorage.setItem("isArabic?", arabic);
+    } else {
+      arabic = false;
+      window.localStorage.setItem("isArabic?", arabic);
+    }
+  });
+
+  checkBoxlang2.addEventListener("change", () => {
+    if (checkBoxlang2.checked) {
+      arabic = true;
+      window.localStorage.setItem("isArabic?", arabic);
+    } else {
+      arabic = false;
+      window.localStorage.setItem("isArabic?", arabic);
+    }
+  });
+}
+
 countDown();
 skillsWidth();
 statsCount();
@@ -378,4 +475,6 @@ showUpScrollToTopButton();
 darkModeButton();
 addtoLocalStorage();
 onLoad();
-translate();
+changeLanguagesButton();
+addLanguagetoLocalStorage();
+onLoadLanguages();

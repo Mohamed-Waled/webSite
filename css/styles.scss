@@ -2869,8 +2869,6 @@ header {
   }
   header {
     .darkModeButton {
-      left: unset;
-      right: -100px;
       .label {
         flex-direction: row-reverse;
       }
@@ -2883,6 +2881,24 @@ header {
     .darkModeButton-small-mobile {
       transform: translateX(-50%);
       .label2 {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  header {
+    .laguagesButton {
+      .labellang {
+        flex-direction: row-reverse;
+      }
+    }
+    .laguagesButton-small {
+      .labellang1 {
+        flex-direction: row-reverse;
+      }
+    }
+    .laguagesButton-small-mobile {
+      transform: translateX(-50%);
+      .labellang2 {
         flex-direction: row-reverse;
       }
     }
