@@ -67,6 +67,17 @@ function onLoadLanguages() {
       checkBoxlang.checked = false;
       checkBoxlang1.checked = false;
       checkBoxlang2.checked = false;
+      email.setAttribute("placeholder", "Enter Your Email");
+      subscribe.setAttribute("value", "Subscribe");
+      submit.setAttribute("value", "Send");
+      name.setAttribute("placeholder", "Your Name");
+      email1.setAttribute("placeholder", "Your Email");
+      mobile.setAttribute("placeholder", "Your Phone");
+      message.setAttribute("placeholder", "Tell Us About Your Needs");
+      copyright.innerHTML = `coded with ❤ by
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >Eng: mohamed waled</a
+      >.`;
     }
   });
 }
@@ -371,7 +382,9 @@ function translate(language) {
   let lang = language;
   let allDom = document.querySelectorAll("*");
 
-  fetch(`https://raw.githubusercontent.com/Mohamed-Waled/webSite/main/languages/${lang}.json`)
+  fetch(
+    `https://raw.githubusercontent.com/Mohamed-Waled/webSite/main/languages/${lang}.json`
+  )
     .then((response) => {
       return response.json();
     })
@@ -398,6 +411,15 @@ function changeLanguagesButton() {
   let checkBoxlang1 = document.querySelector(".checkboxlang1");
   let checkBoxlang2 = document.querySelector(".checkboxlang2");
 
+  let email = document.querySelector(".email1");
+  let subscribe = document.querySelector(".subscribee");
+  let name = document.querySelector(".namee");
+  let email1 = document.querySelector(".emaill");
+  let mobile = document.querySelector(".mobilee");
+  let message = document.querySelector(".messagee");
+  let submit = document.querySelector(".sendd");
+  let copyright = document.querySelector(".copyright");
+
   let body = document.querySelector("body");
 
   checkBoxlang.addEventListener("change", () => {
@@ -405,34 +427,100 @@ function changeLanguagesButton() {
       translate("ar");
       body.classList.add("rtl");
       body.setAttribute("dir", "rtl");
+      email.setAttribute("placeholder", "ادخل بريدك الإلكترونى");
+      subscribe.setAttribute("value", "اشترك");
+      submit.setAttribute("value", "ارسل");
+      name.setAttribute("placeholder", "ادخل أسمك");
+      email1.setAttribute("placeholder", "ادخل بريدك الالكترونى");
+      mobile.setAttribute("placeholder", "ادخل رقم هاتفك");
+      message.setAttribute("placeholder", "ادخل رسالتك");
+      copyright.innerHTML = `تمت برمجتها بكل ال ❤ بواسطة
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >م : محمد وليد</a
+      >.`;
     } else {
       translate("en");
       body.classList.remove("rtl");
       body.removeAttribute("dir", "rtl");
+      email.setAttribute("placeholder", "Enter Your Email");
+      subscribe.setAttribute("value", "Subscribe");
+      submit.setAttribute("value", "Send");
+      name.setAttribute("placeholder", "Your Name");
+      email1.setAttribute("placeholder", "Your Email");
+      mobile.setAttribute("placeholder", "Your Phone");
+      message.setAttribute("placeholder", "Tell Us About Your Needs");
+      copyright.innerHTML = `coded with ❤ by
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >Eng: mohamed waled</a
+      >.`;
     }
   });
 
   checkBoxlang1.addEventListener("change", () => {
     if (checkBoxlang1.checked) {
+      translate("ar");
       body.classList.add("rtl");
       body.setAttribute("dir", "rtl");
-      translate("ar");
+      email.setAttribute("placeholder", "ادخل بريدك الإلكترونى");
+      subscribe.setAttribute("value", "اشترك");
+      submit.setAttribute("value", "ارسل");
+      name.setAttribute("placeholder", "ادخل أسمك");
+      email1.setAttribute("placeholder", "ادخل بريدك الالكترونى");
+      mobile.setAttribute("placeholder", "ادخل رقم هاتفك");
+      message.setAttribute("placeholder", "ادخل رسالتك");
+      copyright.innerHTML = `تمت برمجتها بكل ال ❤ بواسطة
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >م : محمد وليد</a
+      >.`;
     } else {
+      translate("en");
       body.classList.remove("rtl");
       body.removeAttribute("dir", "rtl");
-      translate("en");
+      email.setAttribute("placeholder", "Enter Your Email");
+      subscribe.setAttribute("value", "Subscribe");
+      submit.setAttribute("value", "Send");
+      name.setAttribute("placeholder", "Your Name");
+      email1.setAttribute("placeholder", "Your Email");
+      mobile.setAttribute("placeholder", "Your Phone");
+      message.setAttribute("placeholder", "Tell Us About Your Needs");
+      copyright.innerHTML = `coded with ❤ by
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >Eng: mohamed waled</a
+      >.`;
     }
   });
 
   checkBoxlang2.addEventListener("change", () => {
     if (checkBoxlang2.checked) {
+      translate("ar");
       body.classList.add("rtl");
       body.setAttribute("dir", "rtl");
-      translate("ar");
+      email.setAttribute("placeholder", "ادخل بريدك الإلكترونى");
+      subscribe.setAttribute("value", "اشترك");
+      submit.setAttribute("value", "ارسل");
+      name.setAttribute("placeholder", "ادخل أسمك");
+      email1.setAttribute("placeholder", "ادخل بريدك الالكترونى");
+      mobile.setAttribute("placeholder", "ادخل رقم هاتفك");
+      message.setAttribute("placeholder", "ادخل رسالتك");
+      copyright.innerHTML = `تمت برمجتها بكل ال ❤ بواسطة
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >م : محمد وليد</a
+      >.`;
     } else {
+      translate("en");
       body.classList.remove("rtl");
       body.removeAttribute("dir", "rtl");
-      translate("en");
+      email.setAttribute("placeholder", "Enter Your Email");
+      subscribe.setAttribute("value", "Subscribe");
+      submit.setAttribute("value", "Send");
+      name.setAttribute("placeholder", "Your Name");
+      email1.setAttribute("placeholder", "Your Email");
+      mobile.setAttribute("placeholder", "Your Phone");
+      message.setAttribute("placeholder", "Tell Us About Your Needs");
+      copyright.innerHTML = `coded with ❤ by
+      <a href="https://github.com/Mohamed-Waled" target="_blank"
+        >Eng: mohamed waled</a
+      >.`;
     }
   });
 }
