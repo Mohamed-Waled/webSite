@@ -43,6 +43,7 @@ function onLoadLanguages() {
 
   window.addEventListener("load", () => {
     if (isArabic === "true") {
+      translate("ar");
       body.classList.add("rtl");
       body.setAttribute("dir", "rtl");
       checkBoxlang.checked = true;
@@ -59,15 +60,13 @@ function onLoadLanguages() {
       <a href="https://github.com/Mohamed-Waled" target="_blank"
         >م : محمد وليد</a
       >.`;
-
-      translate("ar");
     } else {
+      translate("en");
       body.classList.remove("rtl");
       body.removeAttribute("dir", "rtl");
       checkBoxlang.checked = false;
       checkBoxlang1.checked = false;
       checkBoxlang2.checked = false;
-      translate("en");
     }
   });
 }
@@ -372,9 +371,7 @@ function translate(language) {
   let lang = language;
   let allDom = document.querySelectorAll("*");
 
-  fetch(
-    `https://raw.githubusercontent.com/Mohamed-Waled/webSite/main/languages/${lang}.json`
-  )
+  fetch(`https://raw.githubusercontent.com/Mohamed-Waled/webSite/main/languages/${lang}.json`)
     .then((response) => {
       return response.json();
     })
@@ -385,7 +382,7 @@ function translate(language) {
             if (element.hasAttribute("data-lang")) {
               if (attr.name === "data-lang") {
                 if (attr.value === key) {
-                  element.innerHTML += jsondata[key];
+                  element.innerHTML = jsondata[key];
                 }
               }
             }
@@ -405,15 +402,13 @@ function changeLanguagesButton() {
 
   checkBoxlang.addEventListener("change", () => {
     if (checkBoxlang.checked) {
+      translate("ar");
       body.classList.add("rtl");
       body.setAttribute("dir", "rtl");
-      window.location.reload();
-      translate("ar");
     } else {
+      translate("en");
       body.classList.remove("rtl");
       body.removeAttribute("dir", "rtl");
-      window.location.reload();
-      translate("en");
     }
   });
 
@@ -421,12 +416,10 @@ function changeLanguagesButton() {
     if (checkBoxlang1.checked) {
       body.classList.add("rtl");
       body.setAttribute("dir", "rtl");
-      window.location.reload();
       translate("ar");
     } else {
       body.classList.remove("rtl");
       body.removeAttribute("dir", "rtl");
-      window.location.reload();
       translate("en");
     }
   });
@@ -435,12 +428,10 @@ function changeLanguagesButton() {
     if (checkBoxlang2.checked) {
       body.classList.add("rtl");
       body.setAttribute("dir", "rtl");
-      window.location.reload();
       translate("ar");
     } else {
       body.classList.remove("rtl");
       body.removeAttribute("dir", "rtl");
-      window.location.reload();
       translate("en");
     }
   });
