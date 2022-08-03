@@ -1233,6 +1233,20 @@ header {
     }
   }
 }
+@media (min-width: 532px) and (max-width: 669px) {
+  #features {
+    .container {
+      .box {
+        .featuresPhoto::after {
+          border-width: 0 0 170px 700px;
+        }
+      }
+      .box:hover .featuresPhoto::after {
+        border-width: 170px 800px 170px 0;
+      }
+    }
+  }
+}
 // Features End
 //######################################################################
 // Testimonials Start

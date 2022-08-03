@@ -1393,6 +1393,14 @@ header .container .button {
   color: white;
 }
 
+@media (min-width: 532px) and (max-width: 669px) {
+  #features .container .box .featuresPhoto::after {
+    border-width: 0 0 170px 700px;
+  }
+  #features .container .box:hover .featuresPhoto::after {
+    border-width: 170px 800px 170px 0;
+  }
+}
 #testimonials {
   padding: 100px 0;
   background-color: #ececec;
