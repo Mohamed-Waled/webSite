@@ -63,7 +63,7 @@ function onLoadLanguages() {
     } else {
       translate("en");
       body.classList.remove("rtl");
-      body.removeAttribute("dir", "rtl");
+      body.removeAttribute("dir");
       checkBoxlang.checked = false;
       checkBoxlang1.checked = false;
       checkBoxlang2.checked = false;
@@ -84,7 +84,7 @@ function onLoadLanguages() {
 
 // Events Count Down
 function countDown() {
-  let countdownDate = new Date("Sept 28, 2023 23:59:59").getTime();
+  let countdownDate = new Date("Sept 28, 2025 23:59:59").getTime();
 
   let counter = setInterval(() => {
     // Get Time Now
@@ -129,7 +129,7 @@ function skillsWidth() {
 
     if (window.scrollY < section.offsetTop - 200) {
       progressBar.forEach((bar) => {
-        bar.style.width = 0;
+        bar.style.width = "0";
       });
     }
   });
@@ -173,25 +173,25 @@ function dotsEntering() {
   // First Section
   window.addEventListener("scroll", () => {
     if (window.scrollY >= section1.offsetTop - 300) {
-      dots1[0].style.right = 0;
+      dots1[0].style.right = "0";
     }
   });
   window.addEventListener("scroll", () => {
     if (window.scrollY >= section1.offsetTop - 200) {
-      dots2[0].style.left = 0;
+      dots2[0].style.left = "0";
     }
   });
 
   // Second Section
   window.addEventListener("scroll", () => {
     if (window.scrollY >= section2.offsetTop - 300) {
-      dots1[1].style.right = 0;
+      dots1[1].style.right = "0";
     }
   });
 
   window.addEventListener("scroll", () => {
     if (window.scrollY >= section2.offsetTop - 200) {
-      dots2[1].style.left = 0;
+      dots2[1].style.left = "0";
     }
   });
 }
@@ -441,7 +441,7 @@ function changeLanguagesButton() {
     } else {
       translate("en");
       body.classList.remove("rtl");
-      body.removeAttribute("dir", "rtl");
+      body.removeAttribute("dir");
       email.setAttribute("placeholder", "Enter Your Email");
       subscribe.setAttribute("value", "Subscribe");
       submit.setAttribute("value", "Send");
@@ -475,7 +475,7 @@ function changeLanguagesButton() {
     } else {
       translate("en");
       body.classList.remove("rtl");
-      body.removeAttribute("dir", "rtl");
+      body.removeAttribute("dir");
       email.setAttribute("placeholder", "Enter Your Email");
       subscribe.setAttribute("value", "Subscribe");
       submit.setAttribute("value", "Send");
@@ -509,7 +509,7 @@ function changeLanguagesButton() {
     } else {
       translate("en");
       body.classList.remove("rtl");
-      body.removeAttribute("dir", "rtl");
+      body.removeAttribute("dir");
       email.setAttribute("placeholder", "Enter Your Email");
       subscribe.setAttribute("value", "Subscribe");
       submit.setAttribute("value", "Send");
